@@ -34,8 +34,11 @@ export default function Dashboard() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-cron-secret': process.env.NEXT_PUBLIC_CRON_SECRET || 'manual-trigger'
-        }
+          'x-cron-secret': 'jibberjabberlost23'
+        },
+        body: JSON.stringify({
+          cronSecret: 'jibberjabberlost23'
+        })
       })
       
       if (response.ok) {

@@ -192,7 +192,7 @@ async function getCalendarEvents(auth) {
   })
 
   // Filter events by investor-related keywords
-  const keywords = ['investor', 'pitch', 'intro', 'funding', 'vc', 'investment', 'demo', 'meeting']
+  const keywords = ['investor', 'pitch', 'intro', 'funding', 'vc', 'investment', 'demo', 'meeting', 'vie']
   
   return response.data.items?.filter(event => {
     const title = (event.summary || '').toLowerCase()

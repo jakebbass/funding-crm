@@ -12,12 +12,14 @@ This guide walks you through deploying your funding CRM application to Google Cl
 ## 🔧 Step 1: Initial GCP Setup
 
 ### 1.1 Set your project ID
+
 ```bash
 export PROJECT_ID="your-project-id"
 gcloud config set project $PROJECT_ID
 ```
 
 ### 1.2 Enable required APIs
+
 ```bash
 # Run the automated setup script
 chmod +x setup.sh
@@ -32,6 +34,7 @@ gcloud services enable artifactregistry.googleapis.com
 ```
 
 ### 1.3 Create Artifact Registry repository
+
 ```bash
 gcloud artifacts repositories create funding-crm \
     --repository-format=docker \
@@ -42,6 +45,7 @@ gcloud artifacts repositories create funding-crm \
 ## 🔐 Step 2: Google Service Account Setup
 
 ### 2.1 Create service account
+
 ```bash
 gcloud iam service-accounts create funding-crm-service \
     --display-name="Funding CRM Service Account" \
@@ -49,6 +53,7 @@ gcloud iam service-accounts create funding-crm-service \
 ```
 
 ### 2.2 Grant necessary permissions
+
 ```bash
 # Service account email
 SERVICE_EMAIL="funding-crm-service@$PROJECT_ID.iam.gserviceaccount.com"
@@ -64,12 +69,14 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
 ```
 
 ### 2.3 Create and download service account key
+
 ```bash
 gcloud iam service-accounts keys create service-account.json \
     --iam-account=$SERVICE_EMAIL
 ```
 
 ### 2.4 Extract credentials for environment variables
+
 ```bash
 # Get the service account email
 cat service-account.json | jq -r '.client_email'
@@ -81,12 +88,15 @@ cat service-account.json | jq -r '.private_key'
 ## 📊 Step 3: Google Sheets Setup
 
 ### 3.1 Create Google Sheet
+
 1. Go to [Google Sheets](https://sheets.google.com)
 2. Create a new spreadsheet named "Funding CRM"
 3. Create two sheets: "Contacts" and "Sync"
 
 ### 3.2 Set up Contacts sheet headers
+
 In the "Contacts" sheet, add these headers in row 1:
+
 - A1: Name
 - B1: Email  
 - C1: Status
@@ -96,11 +106,14 @@ In the "Contacts" sheet, add these headers in row 1:
 - G1: Created At
 
 ### 3.3 Set up Sync sheet
+
 In the "Sync" sheet, add:
+
 - A1: Last Sync
 - B1: (leave empty - will be populated by app)
 
 ### 3.4 Share with service account
+
 1. Get your service account email from step 2.4
 2. Share the Google Sheet with that email address
 3. Give it "Editor" permissions
@@ -109,6 +122,7 @@ In the "Sync" sheet, add:
 ## 🔐 Step 4: Environment Variables Setup
 
 ### 4.1 Prepare your environment variables
+
 Create a file called `env-vars.txt` with your actual values:
 
 ```bash
@@ -134,6 +148,7 @@ CRON_SECRET=your_secure_random_string_here
 ## 🐳 Step 5: Build and Deploy to Cloud Run
 
 ### 5.1 Build using Cloud Build
+
 ```bash
 # Submit build to Cloud Build
 gcloud builds submit --config cloudbuild.yaml \
@@ -141,6 +156,7 @@ gcloud builds submit --config cloudbuild.yaml \
 ```
 
 ### 5.2 Deploy to Cloud Run
+
 ```bash
 # Deploy with environment variables
 gcloud run deploy funding-crm \
@@ -152,6 +168,7 @@ gcloud run deploy funding-crm \
 ```
 
 ### 5.3 Alternative: Use automated deployment script
+
 ```bash
 # Make script executable and run
 chmod +x deploy.sh
@@ -161,11 +178,13 @@ chmod +x deploy.sh
 ## ⏰ Step 6: Set Up Cloud Scheduler (Automated Sync)
 
 ### 6.1 Enable Cloud Scheduler API
+
 ```bash
 gcloud services enable cloudscheduler.googleapis.com
 ```
 
 ### 6.2 Get your Cloud Run service URL
+
 ```bash
 gcloud run services describe funding-crm \
     --platform managed \
@@ -174,6 +193,7 @@ gcloud run services describe funding-crm \
 ```
 
 ### 6.3 Create scheduled job
+
 ```bash
 # Replace YOUR_SERVICE_URL with the URL from step 6.2
 # Replace YOUR_CRON_SECRET with your actual secret
@@ -190,6 +210,7 @@ gcloud scheduler jobs create http funding-crm-sync \
 ## 🧪 Step 7: Test Your Deployment
 
 ### 7.1 Test the application
+
 ```bash
 # Get your service URL
 SERVICE_URL=$(gcloud run services describe funding-crm --platform managed --region us-central1 --format 'value(status.url)')
@@ -208,6 +229,7 @@ curl -X POST $SERVICE_URL/api/sync \
 ```
 
 ### 7.2 Monitor logs
+
 ```bash
 # View Cloud Run logs
 gcloud logs tail "resource.type=cloud_run_revision" --limit=50
@@ -216,6 +238,7 @@ gcloud logs tail "resource.type=cloud_run_revision" --limit=50
 ## 🔧 Step 8: Optional Customizations
 
 ### 8.1 Set up custom domain
+
 ```bash
 gcloud run domain-mappings create \
     --service funding-crm \
@@ -224,6 +247,7 @@ gcloud run domain-mappings create \
 ```
 
 ### 8.2 Configure scaling
+
 ```bash
 gcloud run services update funding-crm \
     --min-instances=0 \
@@ -235,22 +259,25 @@ gcloud run services update funding-crm \
 ## 📊 Step 9: Monitoring and Maintenance
 
 ### 9.1 Set up monitoring
+
 - Go to Cloud Console > Cloud Run > funding-crm
 - Set up alerts for errors, latency, and resource usage
 
 ### 9.2 View application
+
 Your application will be available at the Cloud Run service URL from step 6.2
 
 ## 🚨 Troubleshooting
 
-### Common Issues:
+### Common Issues
 
 1. **Authentication errors**: Check service account permissions and private key formatting
 2. **API quota errors**: Verify APIs are enabled in your project  
 3. **Build failures**: Check Dockerfile and dependencies
 4. **Sheet access errors**: Verify sheet is shared with service account email
 
-### Debug commands:
+### Debug commands
+
 ```bash
 # Check service status
 gcloud run services describe funding-crm --region us-central1
@@ -262,9 +289,10 @@ gcloud logs read "resource.type=cloud_run_revision" --limit=100 --format="table(
 gcloud run services describe funding-crm --region us-central1 --format="export" | grep env
 ```
 
-## ✅ Success!
+## ✅ Success
 
 Your funding CRM application is now deployed and running on Google Cloud Platform with:
+
 - ✅ Automatic scaling with Cloud Run
 - ✅ Scheduled sync every 6 hours
 - ✅ Secure authentication with service accounts
