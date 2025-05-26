@@ -321,7 +321,7 @@ async function getFirefliesTranscript(email, meetingDate) {
   const endDate = new Date(searchDate.getTime() + (24 * 60 * 60 * 1000))   // 1 day after
 
   try {
-    // Use POST method with correct GraphQL query structure
+    // Step 1: Find matching transcript
     const response = await axios.post('https://api.fireflies.ai/graphql', {
       query: `
         query GetTranscripts($fromDate: DateTime!, $toDate: DateTime!) {
@@ -333,7 +333,6 @@ async function getFirefliesTranscript(email, meetingDate) {
             id
             title
             date
-            transcript_text
             participants
           }
         }
@@ -356,7 +355,49 @@ async function getFirefliesTranscript(email, meetingDate) {
       Array.isArray(t.participants) && t.participants.includes(email)
     )
 
-    return matchingTranscript?.transcript_text || null
+    if (!matchingTranscript) {
+      return null
+    }
+
+    // Step 2: Get the full transcript content using the transcript ID
+    const transcriptResponse = await axios.post('https://api.fireflies.ai/graphql', {
+      query: `
+        query GetSpecificTranscript($transcriptId: String!) {
+          transcript(id: $transcriptId) {
+            id
+            title
+            date
+            sentences {
+              text
+              speaker_name
+            }
+            participants
+          }
+        }
+      `,
+      variables: {
+        transcriptId: matchingTranscript.id
+      }
+    }, {
+      headers: {
+        'Authorization': `Bearer ${process.env.FIREFLIES_API_KEY}`,
+        'Content-Type': 'application/json'
+      }
+    })
+
+    const fullTranscript = transcriptResponse.data?.data?.transcript
+    
+    if (!fullTranscript || !fullTranscript.sentences) {
+      return null
+    }
+
+    // Convert sentences to readable transcript text
+    const transcriptText = fullTranscript.sentences
+      .map(sentence => `${sentence.speaker_name || 'Speaker'}: ${sentence.text}`)
+      .join('\n')
+
+    logMessage(`Retrieved transcript for ${email} - ${transcriptText.length} characters`)
+    return transcriptText
     
   } catch (error) {
     logMessage(`Fireflies API error details: ${JSON.stringify(error.response?.data || error.message)}`)
@@ -385,7 +426,7 @@ Focus on investment interest, concerns raised, timeline, and concrete next steps
     if (process.env.OPENAI_API_KEY) {
       const openai = getAIClient()
       const response = await openai.chat.completions.create({
-        model: 'gpt-4',
+        model: 'gpt-4o-mini',
         messages: [{ role: 'user', content: prompt }],
         temperature: 0.3,
         max_tokens: 500

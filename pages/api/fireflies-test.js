@@ -121,15 +121,69 @@ export default async function handler(req, res) {
       console.log('Date range transcripts error:', error.response?.data || error.message)
     }
 
-    // Test 4: Test the original function approach but with correct HTTP method
-    console.log('\n=== Test 4: Original Function Approach (Fixed) ===')
+    // Test 4: Test getting transcript text for a specific meeting
+    console.log('\n=== Test 4: Get Specific Transcript Text ===')
     
-    const testEmail = 'test@example.com' // We'll use this to test the function logic
-    const testDate = new Date().toISOString()
+    if (transcriptsResponse?.data?.data?.transcripts?.length > 0) {
+      const firstTranscript = transcriptsResponse.data.data.transcripts[0]
+      console.log('Testing transcript ID:', firstTranscript.id)
+      
+      const specificTranscriptQuery = `
+        query GetSpecificTranscript($transcriptId: String!) {
+          transcript(id: $transcriptId) {
+            id
+            title
+            date
+            transcript_url
+            sentences {
+              text
+              speaker_name
+              ai_filters {
+                action_items
+                questions
+                metrics
+                follow_ups
+                topics
+                tasks
+              }
+            }
+            participants
+          }
+        }
+      `
+
+      try {
+        const specificResponse = await axios.post('https://api.fireflies.ai/graphql', {
+          query: specificTranscriptQuery,
+          variables: {
+            transcriptId: firstTranscript.id
+          }
+        }, {
+          headers: {
+            'Authorization': `Bearer ${firefliesApiKey}`,
+            'Content-Type': 'application/json'
+          }
+        })
+        
+        console.log('Specific transcript response:', JSON.stringify(specificResponse.data, null, 2))
+      } catch (error) {
+        console.log('Specific transcript error:', error.response?.data || error.message)
+      }
+    }
+
+    // Test 5: Test the original function approach but with correct HTTP method
+    console.log('\n=== Test 5: Original Function Approach (Fixed) ===')
+    
+    const testEmail = 'simon.draper@growersedge.com' // Use a real email from the transcripts
+    const testDate = new Date(1747771200000).toISOString() // Use the date from the "Texas" meeting
     
     try {
       const transcript = await getFirefliesTranscriptFixed(testEmail, testDate, firefliesApiKey)
       console.log('Original function result:', transcript ? 'Found transcript' : 'No transcript found')
+      if (transcript) {
+        console.log('Transcript length:', transcript.length)
+        console.log('Transcript preview:', transcript.substring(0, 200) + '...')
+      }
     } catch (error) {
       console.log('Original function error:', error.message)
     }
@@ -174,7 +228,7 @@ async function getFirefliesTranscriptFixed(email, meetingDate, apiKey) {
             id
             title
             date
-            transcript_text
+            transcript_url
             participants
           }
         }
@@ -197,7 +251,7 @@ async function getFirefliesTranscriptFixed(email, meetingDate, apiKey) {
       Array.isArray(t.participants) && t.participants.includes(email)
     )
 
-    return matchingTranscript?.transcript_text || null
+    return matchingTranscript?.transcript_url || null
     
   } catch (error) {
     throw new Error(`Fireflies API error: ${error.message}`)

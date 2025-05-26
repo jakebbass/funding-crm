@@ -1,0 +1,1573 @@
+
+> funding-crm@1.0.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+  ▲ Next.js 14.2.29
+  - Local:        http://localhost:3001
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 1812ms
+ ✓ Compiled /api/fireflies-test in 162ms (66 modules)
+Testing Fireflies API...
+API Key: f8e54bad...
+
+=== Test 1: Basic API Connectivity ===
+User info response: {
+  data: {
+    user: {
+      user_id: 'O39slbPiGd',
+      name: 'Jake Bass',
+      email: 'jake@viehq.com'
+    }
+  }
+}
+
+=== Test 2: Get Recent Transcripts ===
+Recent transcripts response: {
+  "data": {
+    "transcripts": [
+      {
+        "id": "01JVR05KKP5WW2KAB65VYFT4TB",
+        "title": "LvlUp Labs Infosession",
+        "date": 1747947600000,
+        "duration": 58.599998474121094,
+        "participants": [
+          "ahmad.faraz1645@gmail.com",
+          "bilguissa@frenchica.com",
+          "deepak.murugan@clustervise.com",
+          "dana.klein@gheorg.com",
+          "sheilisa@fria-jewelry.com",
+          "kevin@outpaged.com",
+          "mnieto@equilityhq.com",
+          "ck@stratpilot.ai",
+          "harry@outbox.co.uk",
+          "lisashe1@msn.com",
+          "raja@instasdr.ai",
+          "dan@remotecasa.co",
+          "evan@thenaritiv.com",
+          "tk.belarus@gmail.com",
+          "michael@spaceling.com",
+          "bquesada@viaarcus.com",
+          "jkabach@somastars.com",
+          "warren@awesomeaminos.com",
+          "ola@farmsgate.ng",
+          "chandan@onlyhydroponics.in",
+          "nimesh@sampatee.com",
+          "adelric@arcledi.com",
+          "m.mershiev@avareit.com",
+          "amaury@kommunity.app",
+          "zomawii@tuibonnatural.com",
+          "sudharsan@bversity.io",
+          "shruti@gobundled.com",
+          "sankarsh@stardour.com",
+          "ifejubee@gmail.com",
+          "bahar@raymare.com",
+          "rizwan.shariff@musicbeats.us",
+          "pytell@smabbler.com",
+          "erkan.yildirim@digitalwisers.com",
+          "jrivers@oasisenergydrink.com",
+          "luthfun@pebblesense.io",
+          "laurance.kenny@fetcherportal.com",
+          "scottcohen@alphacuretx.com",
+          "sammie@pug.ai",
+          "chaun@stewyandterra.com",
+          "art@ravelmade.com",
+          "dave@prizminsurance.io",
+          "efiore@roverresearch.it",
+          "s.ali0345345@gmail.com",
+          "dblackstone@orchestralabs.org",
+          "josh@neuro-notion.com",
+          "jindalshauryaiitd@gmail.com",
+          "paultirtha04@gmail.com",
+          "halil@nobelailegal.com",
+          "euan@elanixai.com",
+          "ikhenatonkirigha@gmail.com",
+          "gagan@visiongogogo.com",
+          "marita.lidonde@vitalihealth.co",
+          "wisdomojong@ymail.com",
+          "contact@commuai.tech",
+          "joshua@godurra.com",
+          "yaakov.sash@novospir.com",
+          "brittany@gofrosty.ai",
+          "cihannam@gmail.com",
+          "erniekyle@kyleworth.com",
+          "pramod.sajja@farmtoplate.io",
+          "carol.constant@whomlab.com",
+          "shyabiswas@gmail.com",
+          "asu.biswal@gmail.com",
+          "tom@bearhugpalletwraps.com",
+          "fkamanli@subu.edu.tr",
+          "jadeeee.zh@gmail.com",
+          "ufuoma@bestieconnect.com",
+          "sales@aexvion.com",
+          "prasantatalukdar.official@gmail.com",
+          "derrick@ycenterssl.com",
+          "lisa.henry@relevaince.ai",
+          "riteshp@instatrainme.com",
+          "hp@ecomko.com",
+          "mahfujurrahmanmobin@gmail.com",
+          "michael@mushroomjerky.com",
+          "waters.deng@lumicaretechnologies.com",
+          "kaja@momocoffee.app",
+          "madison@additiveatscale.com",
+          "michael@elastro.com",
+          "guditami@gmail.com",
+          "ricardo.esteban@hitchguardian.me",
+          "giacomo@pickeat.it",
+          "mike@priceme.app",
+          "amoz@genesisplatform.co",
+          "rhett@vriend.ai",
+          "alex.mac@hindsight.store",
+          "imbele@stewards.co.tz",
+          "cm@xii.capital",
+          "rich@createscene.com",
+          "hi@mushsocial.com",
+          "almaz@datacall.ai",
+          "namaeze@gmail.com",
+          "alejandro.cristofalo@circatherapeutics.com",
+          "chibi@thursdaythrift.club",
+          "panirudh@retalp.com",
+          "info.trademodity@icloud.com",
+          "founder@pulseioc.com",
+          "giovanni@tracycore.com",
+          "daniel@lurahealth.com",
+          "craig@sous.so",
+          "mirandanamicheishvili@gmail.com",
+          "elisabeth@boxsy.io",
+          "jesus@hispax.com",
+          "cjones@swiftsight.net",
+          "anchor@crateshealth.com",
+          "sanglap@xfrate.com",
+          "palak@mindverse.dev",
+          "kotryna@areteforyou.com",
+          "vijay@savvyagents.ai",
+          "corey@dayo.co",
+          "harish@avituslabs.xyz",
+          "leon@mycircle.co",
+          "volkan@vimi.tv",
+          "johan@zelf.world",
+          "jade.zheng@intelligencecubed.com",
+          "ali14hasnain@gmail.com",
+          "barry@joincircleup.com",
+          "deeg7@icloud.com",
+          "apple@sharktooth.bio",
+          "mikayel@vertex.art",
+          "daniel.thompson@spincasttv.com",
+          "bart@bradmax.com",
+          "jyoon@bstar.tech",
+          "movespotapp@movespot.net",
+          "pshiu@hceda.org",
+          "mansoor@beatoven.ai",
+          "sparkhousecreative1@gmail.com",
+          "nii@ravenhive.co",
+          "anand@plennery.com",
+          "rgoyal@allayai.com",
+          "juan@bokatechnologies.com",
+          "chukwuemekaogbonna629@gmail.com",
+          "hardik@ceneca.ai",
+          "nischit.suri@gmail.com",
+          "sourabh@qrcite.com",
+          "puneet@strivemindz.com",
+          "nicolas@everreachlabs.io",
+          "rishabh@strategicexecutionconsultants.com",
+          "ismar.hadzic@companionscorp.com",
+          "info@urbansundari.in",
+          "paul@game-fi.io",
+          "krishan.bansal2908@gmail.com",
+          "founder@eatopae.in",
+          "vinay@hincle.com",
+          "manuelkunze@solistaro.com",
+          "kj@smartt-ai.com",
+          "dyogaharshitha@gmail.com",
+          "admin@speakeez.eu",
+          "app.arcangel@gmail.com",
+          "nils@holoride.com",
+          "akshay@a5b10.com",
+          "support@zipro.in",
+          "bobbi@chiuniverse.com",
+          "jude@discoverx.au",
+          "emil@flashpass.school",
+          "info@betasignal.co",
+          "samuel.ojerinde@pymtchat.com",
+          "office@icctnetwork.com",
+          "startasleader@gmail.com",
+          "kris@yauga.io",
+          "james@reai.co",
+          "jake@viehq.com",
+          "eric@caffree.com",
+          "blancarouxpesqueira@gmail.com",
+          "arshdeep@cocopocco.com",
+          "aviral_bhatnagar@eyedeets.com",
+          "kevinmuhamba@gmail.com",
+          "team@cauldy.org",
+          "sunil.punjabi@onicares.com",
+          "ricardo.rodriguez@getlawgic.com",
+          "ghag.rupali@gmail.com",
+          "triato@dayo.co",
+          "ngigid0@gmail.com",
+          "aaron@lvlup.vc"
+        ]
+      },
+      {
+        "id": "01JVQEN4H1ZWQCV9R6A7TYVSKM",
+        "title": "Texas",
+        "date": 1747771200000,
+        "duration": 30.950000762939453,
+        "participants": [
+          "jake@viehq.com",
+          "simon.draper@growersedge.com"
+        ]
+      },
+      {
+        "id": "01JVP6M1DQMGVWXDQ4H5Q33591",
+        "title": "SelfERP Intro Call (30 min) (Jake Bass)",
+        "date": 1747758600000,
+        "duration": 34.72999954223633,
+        "participants": [
+          "viacheslav.snizhko@self-erp.com",
+          "vtkachenko@self-erp.com",
+          "jake@viehq.com"
+        ]
+      },
+      {
+        "id": "01JVCR2NCN355WS3YCDMXNB12E",
+        "title": "Call with Insperity",
+        "date": 1747756800000,
+        "duration": 10.5,
+        "participants": [
+          "jake@viehq.com",
+          "gray.mcdowell@insperity.com"
+        ]
+      },
+      {
+        "id": "01JV82JEQ4KJ0J466J3T53ERN3",
+        "title": "Jake Bass and Bryan Yankton",
+        "date": 1747666800000,
+        "duration": 24,
+        "participants": [
+          "bryan@weraiseco.io",
+          "jake@viehq.com"
+        ]
+      }
+    ]
+  }
+}
+
+=== Test 3: Get Transcripts with Date Range ===
+Date range transcripts response: {
+  "data": {
+    "transcripts": [
+      {
+        "id": "01JVR05KKP5WW2KAB65VYFT4TB",
+        "title": "LvlUp Labs Infosession",
+        "date": 1747947600000,
+        "duration": 58.599998474121094,
+        "participants": [
+          "ahmad.faraz1645@gmail.com",
+          "bilguissa@frenchica.com",
+          "deepak.murugan@clustervise.com",
+          "dana.klein@gheorg.com",
+          "sheilisa@fria-jewelry.com",
+          "kevin@outpaged.com",
+          "mnieto@equilityhq.com",
+          "ck@stratpilot.ai",
+          "harry@outbox.co.uk",
+          "lisashe1@msn.com",
+          "raja@instasdr.ai",
+          "dan@remotecasa.co",
+          "evan@thenaritiv.com",
+          "tk.belarus@gmail.com",
+          "michael@spaceling.com",
+          "bquesada@viaarcus.com",
+          "jkabach@somastars.com",
+          "warren@awesomeaminos.com",
+          "ola@farmsgate.ng",
+          "chandan@onlyhydroponics.in",
+          "nimesh@sampatee.com",
+          "adelric@arcledi.com",
+          "m.mershiev@avareit.com",
+          "amaury@kommunity.app",
+          "zomawii@tuibonnatural.com",
+          "sudharsan@bversity.io",
+          "shruti@gobundled.com",
+          "sankarsh@stardour.com",
+          "ifejubee@gmail.com",
+          "bahar@raymare.com",
+          "rizwan.shariff@musicbeats.us",
+          "pytell@smabbler.com",
+          "erkan.yildirim@digitalwisers.com",
+          "jrivers@oasisenergydrink.com",
+          "luthfun@pebblesense.io",
+          "laurance.kenny@fetcherportal.com",
+          "scottcohen@alphacuretx.com",
+          "sammie@pug.ai",
+          "chaun@stewyandterra.com",
+          "art@ravelmade.com",
+          "dave@prizminsurance.io",
+          "efiore@roverresearch.it",
+          "s.ali0345345@gmail.com",
+          "dblackstone@orchestralabs.org",
+          "josh@neuro-notion.com",
+          "jindalshauryaiitd@gmail.com",
+          "paultirtha04@gmail.com",
+          "halil@nobelailegal.com",
+          "euan@elanixai.com",
+          "ikhenatonkirigha@gmail.com",
+          "gagan@visiongogogo.com",
+          "marita.lidonde@vitalihealth.co",
+          "wisdomojong@ymail.com",
+          "contact@commuai.tech",
+          "joshua@godurra.com",
+          "yaakov.sash@novospir.com",
+          "brittany@gofrosty.ai",
+          "cihannam@gmail.com",
+          "erniekyle@kyleworth.com",
+          "pramod.sajja@farmtoplate.io",
+          "carol.constant@whomlab.com",
+          "shyabiswas@gmail.com",
+          "asu.biswal@gmail.com",
+          "tom@bearhugpalletwraps.com",
+          "fkamanli@subu.edu.tr",
+          "jadeeee.zh@gmail.com",
+          "ufuoma@bestieconnect.com",
+          "sales@aexvion.com",
+          "prasantatalukdar.official@gmail.com",
+          "derrick@ycenterssl.com",
+          "lisa.henry@relevaince.ai",
+          "riteshp@instatrainme.com",
+          "hp@ecomko.com",
+          "mahfujurrahmanmobin@gmail.com",
+          "michael@mushroomjerky.com",
+          "waters.deng@lumicaretechnologies.com",
+          "kaja@momocoffee.app",
+          "madison@additiveatscale.com",
+          "michael@elastro.com",
+          "guditami@gmail.com",
+          "ricardo.esteban@hitchguardian.me",
+          "giacomo@pickeat.it",
+          "mike@priceme.app",
+          "amoz@genesisplatform.co",
+          "rhett@vriend.ai",
+          "alex.mac@hindsight.store",
+          "imbele@stewards.co.tz",
+          "cm@xii.capital",
+          "rich@createscene.com",
+          "hi@mushsocial.com",
+          "almaz@datacall.ai",
+          "namaeze@gmail.com",
+          "alejandro.cristofalo@circatherapeutics.com",
+          "chibi@thursdaythrift.club",
+          "panirudh@retalp.com",
+          "info.trademodity@icloud.com",
+          "founder@pulseioc.com",
+          "giovanni@tracycore.com",
+          "daniel@lurahealth.com",
+          "craig@sous.so",
+          "mirandanamicheishvili@gmail.com",
+          "elisabeth@boxsy.io",
+          "jesus@hispax.com",
+          "cjones@swiftsight.net",
+          "anchor@crateshealth.com",
+          "sanglap@xfrate.com",
+          "palak@mindverse.dev",
+          "kotryna@areteforyou.com",
+          "vijay@savvyagents.ai",
+          "corey@dayo.co",
+          "harish@avituslabs.xyz",
+          "leon@mycircle.co",
+          "volkan@vimi.tv",
+          "johan@zelf.world",
+          "jade.zheng@intelligencecubed.com",
+          "ali14hasnain@gmail.com",
+          "barry@joincircleup.com",
+          "deeg7@icloud.com",
+          "apple@sharktooth.bio",
+          "mikayel@vertex.art",
+          "daniel.thompson@spincasttv.com",
+          "bart@bradmax.com",
+          "jyoon@bstar.tech",
+          "movespotapp@movespot.net",
+          "pshiu@hceda.org",
+          "mansoor@beatoven.ai",
+          "sparkhousecreative1@gmail.com",
+          "nii@ravenhive.co",
+          "anand@plennery.com",
+          "rgoyal@allayai.com",
+          "juan@bokatechnologies.com",
+          "chukwuemekaogbonna629@gmail.com",
+          "hardik@ceneca.ai",
+          "nischit.suri@gmail.com",
+          "sourabh@qrcite.com",
+          "puneet@strivemindz.com",
+          "nicolas@everreachlabs.io",
+          "rishabh@strategicexecutionconsultants.com",
+          "ismar.hadzic@companionscorp.com",
+          "info@urbansundari.in",
+          "paul@game-fi.io",
+          "krishan.bansal2908@gmail.com",
+          "founder@eatopae.in",
+          "vinay@hincle.com",
+          "manuelkunze@solistaro.com",
+          "kj@smartt-ai.com",
+          "dyogaharshitha@gmail.com",
+          "admin@speakeez.eu",
+          "app.arcangel@gmail.com",
+          "nils@holoride.com",
+          "akshay@a5b10.com",
+          "support@zipro.in",
+          "bobbi@chiuniverse.com",
+          "jude@discoverx.au",
+          "emil@flashpass.school",
+          "info@betasignal.co",
+          "samuel.ojerinde@pymtchat.com",
+          "office@icctnetwork.com",
+          "startasleader@gmail.com",
+          "kris@yauga.io",
+          "james@reai.co",
+          "jake@viehq.com",
+          "eric@caffree.com",
+          "blancarouxpesqueira@gmail.com",
+          "arshdeep@cocopocco.com",
+          "aviral_bhatnagar@eyedeets.com",
+          "kevinmuhamba@gmail.com",
+          "team@cauldy.org",
+          "sunil.punjabi@onicares.com",
+          "ricardo.rodriguez@getlawgic.com",
+          "ghag.rupali@gmail.com",
+          "triato@dayo.co",
+          "ngigid0@gmail.com",
+          "aaron@lvlup.vc"
+        ]
+      },
+      {
+        "id": "01JVQEN4H1ZWQCV9R6A7TYVSKM",
+        "title": "Texas",
+        "date": 1747771200000,
+        "duration": 30.950000762939453,
+        "participants": [
+          "jake@viehq.com",
+          "simon.draper@growersedge.com"
+        ]
+      },
+      {
+        "id": "01JVP6M1DQMGVWXDQ4H5Q33591",
+        "title": "SelfERP Intro Call (30 min) (Jake Bass)",
+        "date": 1747758600000,
+        "duration": 34.72999954223633,
+        "participants": [
+          "viacheslav.snizhko@self-erp.com",
+          "vtkachenko@self-erp.com",
+          "jake@viehq.com"
+        ]
+      },
+      {
+        "id": "01JVCR2NCN355WS3YCDMXNB12E",
+        "title": "Call with Insperity",
+        "date": 1747756800000,
+        "duration": 10.5,
+        "participants": [
+          "jake@viehq.com",
+          "gray.mcdowell@insperity.com"
+        ]
+      },
+      {
+        "id": "01JV82JEQ4KJ0J466J3T53ERN3",
+        "title": "Jake Bass and Bryan Yankton",
+        "date": 1747666800000,
+        "duration": 24,
+        "participants": [
+          "bryan@weraiseco.io",
+          "jake@viehq.com"
+        ]
+      },
+      {
+        "id": "01JVA6X6CQKME9VAQ7YDQMD680",
+        "title": "Jake Bass and Ignacio Castro",
+        "date": 1747407600000,
+        "duration": 33.380001068115234,
+        "participants": [
+          "ic@128vc.com",
+          "jake@viehq.com",
+          "icastro@santander.us"
+        ]
+      },
+      {
+        "id": "01JTXRZCV0F69WYAS7AM3R0QY6",
+        "title": "Fundraising Readiness Reviews (Jake Bass)",
+        "date": 1747054800000,
+        "duration": 11.970000267028809,
+        "participants": [
+          "portfolio@founderinstitute.com",
+          "ryan@founderinstitute.com",
+          "andres.leon@founderinstitute.com",
+          "jake@viehq.com"
+        ]
+      },
+      {
+        "id": "01JT7V5J1JGHWQ9FG76KYTF8G2",
+        "title": "Vie <> Eksim VC",
+        "date": 1746727200000,
+        "duration": 52.86000061035156,
+        "participants": [
+          "jake@viehq.com",
+          "inalcan.gulec.tr@gmail.com",
+          "rannandsingh@gmail.com",
+          "inalcan.gulec@eksim.vc"
+        ]
+      },
+      {
+        "id": "01JTEAK4P9YNPRAJPT4AGAK5JT",
+        "title": "Igor + Alexandra (CommonOcean VC) // Intro with Jake Bass (Vie)",
+        "date": 1746547200000,
+        "duration": 3.5399999618530273,
+        "participants": [
+          "mihaescua@gmail.com",
+          "igor.ulis@gmail.com",
+          "jake@viehq.com"
+        ]
+      },
+      {
+        "id": "01JT14CMB3ZMNXE5HAWGF8FP67",
+        "title": "VIE (Jake Bass) <> FT Partners (Zach Beemer)",
+        "date": 1746210600000,
+        "duration": 11.890000343322754,
+        "participants": [
+          "zachary.beemer@ftpartners.com",
+          "jake@viehq.com",
+          "tmp@ftpartners.com"
+        ]
+      }
+    ]
+  }
+}
+
+=== Test 4: Get Specific Transcript Text ===
+Testing transcript ID: 01JVR05KKP5WW2KAB65VYFT4TB
+Specific transcript error: {
+  errors: [
+    {
+      friendly: false,
+      message: 'Cannot query field "transcript_text" on type "Transcript". Did you mean "transcript_url"?',
+      locations: [Array],
+      code: 'GRAPHQL_VALIDATION_FAILED',
+      extensions: {}
+    },
+    {
+      friendly: false,
+      message: 'Field "ai_filters" of type "AIFilters" must have a selection of subfields. Did you mean "ai_filters { ... }"?',
+      locations: [Array],
+      code: 'GRAPHQL_VALIDATION_FAILED',
+      extensions: {}
+    }
+  ]
+}
+
+=== Test 5: Original Function Approach (Fixed) ===
+Original function error: Fireflies API error: Request failed with status code 400
+ GET /api/fireflies-test 200 in 6875ms
+ ✓ Compiled in 97ms (66 modules)
+ ✓ Compiled in 156ms (50 modules)
+ ✓ Compiled /api/fireflies-test in 104ms (66 modules)
+Testing Fireflies API...
+API Key: f8e54bad...
+
+=== Test 1: Basic API Connectivity ===
+User info response: {
+  data: {
+    user: {
+      user_id: 'O39slbPiGd',
+      name: 'Jake Bass',
+      email: 'jake@viehq.com'
+    }
+  }
+}
+
+=== Test 2: Get Recent Transcripts ===
+Recent transcripts response: {
+  "data": {
+    "transcripts": [
+      {
+        "id": "01JVR05KKP5WW2KAB65VYFT4TB",
+        "title": "LvlUp Labs Infosession",
+        "date": 1747947600000,
+        "duration": 58.599998474121094,
+        "participants": [
+          "ahmad.faraz1645@gmail.com",
+          "bilguissa@frenchica.com",
+          "deepak.murugan@clustervise.com",
+          "dana.klein@gheorg.com",
+          "sheilisa@fria-jewelry.com",
+          "kevin@outpaged.com",
+          "mnieto@equilityhq.com",
+          "ck@stratpilot.ai",
+          "harry@outbox.co.uk",
+          "lisashe1@msn.com",
+          "raja@instasdr.ai",
+          "dan@remotecasa.co",
+          "evan@thenaritiv.com",
+          "tk.belarus@gmail.com",
+          "michael@spaceling.com",
+          "bquesada@viaarcus.com",
+          "jkabach@somastars.com",
+          "warren@awesomeaminos.com",
+          "ola@farmsgate.ng",
+          "chandan@onlyhydroponics.in",
+          "nimesh@sampatee.com",
+          "adelric@arcledi.com",
+          "m.mershiev@avareit.com",
+          "amaury@kommunity.app",
+          "zomawii@tuibonnatural.com",
+          "sudharsan@bversity.io",
+          "shruti@gobundled.com",
+          "sankarsh@stardour.com",
+          "ifejubee@gmail.com",
+          "bahar@raymare.com",
+          "rizwan.shariff@musicbeats.us",
+          "pytell@smabbler.com",
+          "erkan.yildirim@digitalwisers.com",
+          "jrivers@oasisenergydrink.com",
+          "luthfun@pebblesense.io",
+          "laurance.kenny@fetcherportal.com",
+          "scottcohen@alphacuretx.com",
+          "sammie@pug.ai",
+          "chaun@stewyandterra.com",
+          "art@ravelmade.com",
+          "dave@prizminsurance.io",
+          "efiore@roverresearch.it",
+          "s.ali0345345@gmail.com",
+          "dblackstone@orchestralabs.org",
+          "josh@neuro-notion.com",
+          "jindalshauryaiitd@gmail.com",
+          "paultirtha04@gmail.com",
+          "halil@nobelailegal.com",
+          "euan@elanixai.com",
+          "ikhenatonkirigha@gmail.com",
+          "gagan@visiongogogo.com",
+          "marita.lidonde@vitalihealth.co",
+          "wisdomojong@ymail.com",
+          "contact@commuai.tech",
+          "joshua@godurra.com",
+          "yaakov.sash@novospir.com",
+          "brittany@gofrosty.ai",
+          "cihannam@gmail.com",
+          "erniekyle@kyleworth.com",
+          "pramod.sajja@farmtoplate.io",
+          "carol.constant@whomlab.com",
+          "shyabiswas@gmail.com",
+          "asu.biswal@gmail.com",
+          "tom@bearhugpalletwraps.com",
+          "fkamanli@subu.edu.tr",
+          "jadeeee.zh@gmail.com",
+          "ufuoma@bestieconnect.com",
+          "sales@aexvion.com",
+          "prasantatalukdar.official@gmail.com",
+          "derrick@ycenterssl.com",
+          "lisa.henry@relevaince.ai",
+          "riteshp@instatrainme.com",
+          "hp@ecomko.com",
+          "mahfujurrahmanmobin@gmail.com",
+          "michael@mushroomjerky.com",
+          "waters.deng@lumicaretechnologies.com",
+          "kaja@momocoffee.app",
+          "madison@additiveatscale.com",
+          "michael@elastro.com",
+          "guditami@gmail.com",
+          "ricardo.esteban@hitchguardian.me",
+          "giacomo@pickeat.it",
+          "mike@priceme.app",
+          "amoz@genesisplatform.co",
+          "rhett@vriend.ai",
+          "alex.mac@hindsight.store",
+          "imbele@stewards.co.tz",
+          "cm@xii.capital",
+          "rich@createscene.com",
+          "hi@mushsocial.com",
+          "almaz@datacall.ai",
+          "namaeze@gmail.com",
+          "alejandro.cristofalo@circatherapeutics.com",
+          "chibi@thursdaythrift.club",
+          "panirudh@retalp.com",
+          "info.trademodity@icloud.com",
+          "founder@pulseioc.com",
+          "giovanni@tracycore.com",
+          "daniel@lurahealth.com",
+          "craig@sous.so",
+          "mirandanamicheishvili@gmail.com",
+          "elisabeth@boxsy.io",
+          "jesus@hispax.com",
+          "cjones@swiftsight.net",
+          "anchor@crateshealth.com",
+          "sanglap@xfrate.com",
+          "palak@mindverse.dev",
+          "kotryna@areteforyou.com",
+          "vijay@savvyagents.ai",
+          "corey@dayo.co",
+          "harish@avituslabs.xyz",
+          "leon@mycircle.co",
+          "volkan@vimi.tv",
+          "johan@zelf.world",
+          "jade.zheng@intelligencecubed.com",
+          "ali14hasnain@gmail.com",
+          "barry@joincircleup.com",
+          "deeg7@icloud.com",
+          "apple@sharktooth.bio",
+          "mikayel@vertex.art",
+          "daniel.thompson@spincasttv.com",
+          "bart@bradmax.com",
+          "jyoon@bstar.tech",
+          "movespotapp@movespot.net",
+          "pshiu@hceda.org",
+          "mansoor@beatoven.ai",
+          "sparkhousecreative1@gmail.com",
+          "nii@ravenhive.co",
+          "anand@plennery.com",
+          "rgoyal@allayai.com",
+          "juan@bokatechnologies.com",
+          "chukwuemekaogbonna629@gmail.com",
+          "hardik@ceneca.ai",
+          "nischit.suri@gmail.com",
+          "sourabh@qrcite.com",
+          "puneet@strivemindz.com",
+          "nicolas@everreachlabs.io",
+          "rishabh@strategicexecutionconsultants.com",
+          "ismar.hadzic@companionscorp.com",
+          "info@urbansundari.in",
+          "paul@game-fi.io",
+          "krishan.bansal2908@gmail.com",
+          "founder@eatopae.in",
+          "vinay@hincle.com",
+          "manuelkunze@solistaro.com",
+          "kj@smartt-ai.com",
+          "dyogaharshitha@gmail.com",
+          "admin@speakeez.eu",
+          "app.arcangel@gmail.com",
+          "nils@holoride.com",
+          "akshay@a5b10.com",
+          "support@zipro.in",
+          "bobbi@chiuniverse.com",
+          "jude@discoverx.au",
+          "emil@flashpass.school",
+          "info@betasignal.co",
+          "samuel.ojerinde@pymtchat.com",
+          "office@icctnetwork.com",
+          "startasleader@gmail.com",
+          "kris@yauga.io",
+          "james@reai.co",
+          "jake@viehq.com",
+          "eric@caffree.com",
+          "blancarouxpesqueira@gmail.com",
+          "arshdeep@cocopocco.com",
+          "aviral_bhatnagar@eyedeets.com",
+          "kevinmuhamba@gmail.com",
+          "team@cauldy.org",
+          "sunil.punjabi@onicares.com",
+          "ricardo.rodriguez@getlawgic.com",
+          "ghag.rupali@gmail.com",
+          "triato@dayo.co",
+          "ngigid0@gmail.com",
+          "aaron@lvlup.vc"
+        ]
+      },
+      {
+        "id": "01JVQEN4H1ZWQCV9R6A7TYVSKM",
+        "title": "Texas",
+        "date": 1747771200000,
+        "duration": 30.950000762939453,
+        "participants": [
+          "jake@viehq.com",
+          "simon.draper@growersedge.com"
+        ]
+      },
+      {
+        "id": "01JVP6M1DQMGVWXDQ4H5Q33591",
+        "title": "SelfERP Intro Call (30 min) (Jake Bass)",
+        "date": 1747758600000,
+        "duration": 34.72999954223633,
+        "participants": [
+          "viacheslav.snizhko@self-erp.com",
+          "vtkachenko@self-erp.com",
+          "jake@viehq.com"
+        ]
+      },
+      {
+        "id": "01JVCR2NCN355WS3YCDMXNB12E",
+        "title": "Call with Insperity",
+        "date": 1747756800000,
+        "duration": 10.5,
+        "participants": [
+          "jake@viehq.com",
+          "gray.mcdowell@insperity.com"
+        ]
+      },
+      {
+        "id": "01JV82JEQ4KJ0J466J3T53ERN3",
+        "title": "Jake Bass and Bryan Yankton",
+        "date": 1747666800000,
+        "duration": 24,
+        "participants": [
+          "bryan@weraiseco.io",
+          "jake@viehq.com"
+        ]
+      }
+    ]
+  }
+}
+
+=== Test 3: Get Transcripts with Date Range ===
+Date range transcripts response: {
+  "data": {
+    "transcripts": [
+      {
+        "id": "01JVR05KKP5WW2KAB65VYFT4TB",
+        "title": "LvlUp Labs Infosession",
+        "date": 1747947600000,
+        "duration": 58.599998474121094,
+        "participants": [
+          "ahmad.faraz1645@gmail.com",
+          "bilguissa@frenchica.com",
+          "deepak.murugan@clustervise.com",
+          "dana.klein@gheorg.com",
+          "sheilisa@fria-jewelry.com",
+          "kevin@outpaged.com",
+          "mnieto@equilityhq.com",
+          "ck@stratpilot.ai",
+          "harry@outbox.co.uk",
+          "lisashe1@msn.com",
+          "raja@instasdr.ai",
+          "dan@remotecasa.co",
+          "evan@thenaritiv.com",
+          "tk.belarus@gmail.com",
+          "michael@spaceling.com",
+          "bquesada@viaarcus.com",
+          "jkabach@somastars.com",
+          "warren@awesomeaminos.com",
+          "ola@farmsgate.ng",
+          "chandan@onlyhydroponics.in",
+          "nimesh@sampatee.com",
+          "adelric@arcledi.com",
+          "m.mershiev@avareit.com",
+          "amaury@kommunity.app",
+          "zomawii@tuibonnatural.com",
+          "sudharsan@bversity.io",
+          "shruti@gobundled.com",
+          "sankarsh@stardour.com",
+          "ifejubee@gmail.com",
+          "bahar@raymare.com",
+          "rizwan.shariff@musicbeats.us",
+          "pytell@smabbler.com",
+          "erkan.yildirim@digitalwisers.com",
+          "jrivers@oasisenergydrink.com",
+          "luthfun@pebblesense.io",
+          "laurance.kenny@fetcherportal.com",
+          "scottcohen@alphacuretx.com",
+          "sammie@pug.ai",
+          "chaun@stewyandterra.com",
+          "art@ravelmade.com",
+          "dave@prizminsurance.io",
+          "efiore@roverresearch.it",
+          "s.ali0345345@gmail.com",
+          "dblackstone@orchestralabs.org",
+          "josh@neuro-notion.com",
+          "jindalshauryaiitd@gmail.com",
+          "paultirtha04@gmail.com",
+          "halil@nobelailegal.com",
+          "euan@elanixai.com",
+          "ikhenatonkirigha@gmail.com",
+          "gagan@visiongogogo.com",
+          "marita.lidonde@vitalihealth.co",
+          "wisdomojong@ymail.com",
+          "contact@commuai.tech",
+          "joshua@godurra.com",
+          "yaakov.sash@novospir.com",
+          "brittany@gofrosty.ai",
+          "cihannam@gmail.com",
+          "erniekyle@kyleworth.com",
+          "pramod.sajja@farmtoplate.io",
+          "carol.constant@whomlab.com",
+          "shyabiswas@gmail.com",
+          "asu.biswal@gmail.com",
+          "tom@bearhugpalletwraps.com",
+          "fkamanli@subu.edu.tr",
+          "jadeeee.zh@gmail.com",
+          "ufuoma@bestieconnect.com",
+          "sales@aexvion.com",
+          "prasantatalukdar.official@gmail.com",
+          "derrick@ycenterssl.com",
+          "lisa.henry@relevaince.ai",
+          "riteshp@instatrainme.com",
+          "hp@ecomko.com",
+          "mahfujurrahmanmobin@gmail.com",
+          "michael@mushroomjerky.com",
+          "waters.deng@lumicaretechnologies.com",
+          "kaja@momocoffee.app",
+          "madison@additiveatscale.com",
+          "michael@elastro.com",
+          "guditami@gmail.com",
+          "ricardo.esteban@hitchguardian.me",
+          "giacomo@pickeat.it",
+          "mike@priceme.app",
+          "amoz@genesisplatform.co",
+          "rhett@vriend.ai",
+          "alex.mac@hindsight.store",
+          "imbele@stewards.co.tz",
+          "cm@xii.capital",
+          "rich@createscene.com",
+          "hi@mushsocial.com",
+          "almaz@datacall.ai",
+          "namaeze@gmail.com",
+          "alejandro.cristofalo@circatherapeutics.com",
+          "chibi@thursdaythrift.club",
+          "panirudh@retalp.com",
+          "info.trademodity@icloud.com",
+          "founder@pulseioc.com",
+          "giovanni@tracycore.com",
+          "daniel@lurahealth.com",
+          "craig@sous.so",
+          "mirandanamicheishvili@gmail.com",
+          "elisabeth@boxsy.io",
+          "jesus@hispax.com",
+          "cjones@swiftsight.net",
+          "anchor@crateshealth.com",
+          "sanglap@xfrate.com",
+          "palak@mindverse.dev",
+          "kotryna@areteforyou.com",
+          "vijay@savvyagents.ai",
+          "corey@dayo.co",
+          "harish@avituslabs.xyz",
+          "leon@mycircle.co",
+          "volkan@vimi.tv",
+          "johan@zelf.world",
+          "jade.zheng@intelligencecubed.com",
+          "ali14hasnain@gmail.com",
+          "barry@joincircleup.com",
+          "deeg7@icloud.com",
+          "apple@sharktooth.bio",
+          "mikayel@vertex.art",
+          "daniel.thompson@spincasttv.com",
+          "bart@bradmax.com",
+          "jyoon@bstar.tech",
+          "movespotapp@movespot.net",
+          "pshiu@hceda.org",
+          "mansoor@beatoven.ai",
+          "sparkhousecreative1@gmail.com",
+          "nii@ravenhive.co",
+          "anand@plennery.com",
+          "rgoyal@allayai.com",
+          "juan@bokatechnologies.com",
+          "chukwuemekaogbonna629@gmail.com",
+          "hardik@ceneca.ai",
+          "nischit.suri@gmail.com",
+          "sourabh@qrcite.com",
+          "puneet@strivemindz.com",
+          "nicolas@everreachlabs.io",
+          "rishabh@strategicexecutionconsultants.com",
+          "ismar.hadzic@companionscorp.com",
+          "info@urbansundari.in",
+          "paul@game-fi.io",
+          "krishan.bansal2908@gmail.com",
+          "founder@eatopae.in",
+          "vinay@hincle.com",
+          "manuelkunze@solistaro.com",
+          "kj@smartt-ai.com",
+          "dyogaharshitha@gmail.com",
+          "admin@speakeez.eu",
+          "app.arcangel@gmail.com",
+          "nils@holoride.com",
+          "akshay@a5b10.com",
+          "support@zipro.in",
+          "bobbi@chiuniverse.com",
+          "jude@discoverx.au",
+          "emil@flashpass.school",
+          "info@betasignal.co",
+          "samuel.ojerinde@pymtchat.com",
+          "office@icctnetwork.com",
+          "startasleader@gmail.com",
+          "kris@yauga.io",
+          "james@reai.co",
+          "jake@viehq.com",
+          "eric@caffree.com",
+          "blancarouxpesqueira@gmail.com",
+          "arshdeep@cocopocco.com",
+          "aviral_bhatnagar@eyedeets.com",
+          "kevinmuhamba@gmail.com",
+          "team@cauldy.org",
+          "sunil.punjabi@onicares.com",
+          "ricardo.rodriguez@getlawgic.com",
+          "ghag.rupali@gmail.com",
+          "triato@dayo.co",
+          "ngigid0@gmail.com",
+          "aaron@lvlup.vc"
+        ]
+      },
+      {
+        "id": "01JVQEN4H1ZWQCV9R6A7TYVSKM",
+        "title": "Texas",
+        "date": 1747771200000,
+        "duration": 30.950000762939453,
+        "participants": [
+          "jake@viehq.com",
+          "simon.draper@growersedge.com"
+        ]
+      },
+      {
+        "id": "01JVP6M1DQMGVWXDQ4H5Q33591",
+        "title": "SelfERP Intro Call (30 min) (Jake Bass)",
+        "date": 1747758600000,
+        "duration": 34.72999954223633,
+        "participants": [
+          "viacheslav.snizhko@self-erp.com",
+          "vtkachenko@self-erp.com",
+          "jake@viehq.com"
+        ]
+      },
+      {
+        "id": "01JVCR2NCN355WS3YCDMXNB12E",
+        "title": "Call with Insperity",
+        "date": 1747756800000,
+        "duration": 10.5,
+        "participants": [
+          "jake@viehq.com",
+          "gray.mcdowell@insperity.com"
+        ]
+      },
+      {
+        "id": "01JV82JEQ4KJ0J466J3T53ERN3",
+        "title": "Jake Bass and Bryan Yankton",
+        "date": 1747666800000,
+        "duration": 24,
+        "participants": [
+          "bryan@weraiseco.io",
+          "jake@viehq.com"
+        ]
+      },
+      {
+        "id": "01JVA6X6CQKME9VAQ7YDQMD680",
+        "title": "Jake Bass and Ignacio Castro",
+        "date": 1747407600000,
+        "duration": 33.380001068115234,
+        "participants": [
+          "ic@128vc.com",
+          "jake@viehq.com",
+          "icastro@santander.us"
+        ]
+      },
+      {
+        "id": "01JTXRZCV0F69WYAS7AM3R0QY6",
+        "title": "Fundraising Readiness Reviews (Jake Bass)",
+        "date": 1747054800000,
+        "duration": 11.970000267028809,
+        "participants": [
+          "portfolio@founderinstitute.com",
+          "ryan@founderinstitute.com",
+          "andres.leon@founderinstitute.com",
+          "jake@viehq.com"
+        ]
+      },
+      {
+        "id": "01JT7V5J1JGHWQ9FG76KYTF8G2",
+        "title": "Vie <> Eksim VC",
+        "date": 1746727200000,
+        "duration": 52.86000061035156,
+        "participants": [
+          "jake@viehq.com",
+          "inalcan.gulec.tr@gmail.com",
+          "rannandsingh@gmail.com",
+          "inalcan.gulec@eksim.vc"
+        ]
+      },
+      {
+        "id": "01JTEAK4P9YNPRAJPT4AGAK5JT",
+        "title": "Igor + Alexandra (CommonOcean VC) // Intro with Jake Bass (Vie)",
+        "date": 1746547200000,
+        "duration": 3.5399999618530273,
+        "participants": [
+          "mihaescua@gmail.com",
+          "igor.ulis@gmail.com",
+          "jake@viehq.com"
+        ]
+      },
+      {
+        "id": "01JT14CMB3ZMNXE5HAWGF8FP67",
+        "title": "VIE (Jake Bass) <> FT Partners (Zach Beemer)",
+        "date": 1746210600000,
+        "duration": 11.890000343322754,
+        "participants": [
+          "zachary.beemer@ftpartners.com",
+          "jake@viehq.com",
+          "tmp@ftpartners.com"
+        ]
+      }
+    ]
+  }
+}
+
+=== Test 4: Get Specific Transcript Text ===
+Testing transcript ID: 01JVR05KKP5WW2KAB65VYFT4TB
+Specific transcript error: {
+  errors: [
+    {
+      friendly: false,
+      message: 'Cannot query field "action_items" on type "AIFilters".',
+      locations: [Array],
+      code: 'GRAPHQL_VALIDATION_FAILED',
+      extensions: {}
+    },
+    {
+      friendly: false,
+      message: 'Cannot query field "questions" on type "AIFilters". Did you mean "question"?',
+      locations: [Array],
+      code: 'GRAPHQL_VALIDATION_FAILED',
+      extensions: {}
+    },
+    {
+      friendly: false,
+      message: 'Cannot query field "metrics" on type "AIFilters". Did you mean "metric"?',
+      locations: [Array],
+      code: 'GRAPHQL_VALIDATION_FAILED',
+      extensions: {}
+    },
+    {
+      friendly: false,
+      message: 'Cannot query field "follow_ups" on type "AIFilters".',
+      locations: [Array],
+      code: 'GRAPHQL_VALIDATION_FAILED',
+      extensions: {}
+    },
+    {
+      friendly: false,
+      message: 'Cannot query field "topics" on type "AIFilters".',
+      locations: [Array],
+      code: 'GRAPHQL_VALIDATION_FAILED',
+      extensions: {}
+    },
+    {
+      friendly: false,
+      message: 'Cannot query field "tasks" on type "AIFilters". Did you mean "task"?',
+      locations: [Array],
+      code: 'GRAPHQL_VALIDATION_FAILED',
+      extensions: {}
+    }
+  ]
+}
+
+=== Test 5: Original Function Approach (Fixed) ===
+Original function result: Found transcript
+Transcript length: 56
+Transcript preview: https://app.fireflies.ai/view/01JVQEN4H1ZWQCV9R6A7TYVSKM...
+ GET /api/fireflies-test 200 in 14127ms
+ ✓ Compiled /api/sync in 293ms (69 modules)
+[SYNC] 2025-05-26T22:21:55.801Z: Unauthorized sync attempt - invalid CRON_SECRET
+ POST /api/sync 401 in 984ms
+[SYNC] 2025-05-26T22:22:19.542Z: Starting sync process...
+[SYNC] 2025-05-26T22:22:19.744Z: Google authentication successful
+[DEBUG] Total events before filtering: 89
+[DEBUG] Event 1: Reddit | Vie | Media Plan
+[DEBUG]   Attendees: v.kushal.gautam@reddit.com, jake@viehq.com
+[DEBUG] Event 2: CANCELED -Jake Bass - Legacy Makers Casting Call
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 3: Canceled: Vie x Forecastr Kickoff and Mallory Jennings
+[DEBUG]   Attendees: brigit@forecastr.co, mallory@forecastr.co, jake@viehq.com
+[DEBUG] Event 4: Woodstock in Texas Discussion
+[DEBUG]   Attendees: morten.lund@gmail.com, jake@viehq.com, simon@nxel.co
+[DEBUG] Event 5: Jake Bass - Legacy Makers Casting Call
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 6: Funding Lab Kickoff: Intro to Fundraising
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 7: team Meet (weekly)
+[DEBUG]   Attendees: abie@viehq.com, james@viehq.com, dominic@viehq.com, jake@viehq.com
+[DEBUG] Event 8: Plaid & Vie | Account Manager Sync
+[DEBUG]   Attendees: mmanning@plaid.com, jake@viehq.com
+[DEBUG] Event 9: Crafting an Investor-Ready Pitch Deck (+ How Zendesk Helps You Scale Post-Raise)
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 10: Fundraising Setup
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 11: Scaling Smart: HR Foundations for Fast-Growing Startups
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 12: [HOLD] Founder Night Out : Post-FounderX x SXSW Edition
+[DEBUG]   Attendees: gabriel@foundingtitans.com, tatianatalisa@gmail.com, martin@founderinstitute.com, riley@leviathan-air.com, seven@fourbluepalms.com, gabby.unityevents@gmail.com, omar.zaki@qimavc.com, francesco.cassinerio@gmail.com, jake@viehq.com
+[DEBUG] Event 13: Founder Night Out: Post-FounderX x SXSW Edition
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 14: Fundraising Advisors
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 15: team Meet (weekly)
+[DEBUG]   Attendees: abie@viehq.com, james@viehq.com, dominic@viehq.com, jake@viehq.com
+[DEBUG] Event 16: Vie Card - BankTech Ventures
+[DEBUG]   Attendees: jake@viehq.com, natasha@pnptc.com, nithya@pnptc.com, t.osborne@pnptc.com
+[DEBUG] Event 17: Intro - Jake Bass(Vie) x Maria Jose Arrea
+[DEBUG]   Attendees: jake@viehq.com, marrea@ta.com
+[DEBUG] Event 18: Jake Bass and Jeff Erickson
+[DEBUG]   Attendees: jeff@forecastr.co, jake@viehq.com
+[DEBUG] Event 19: Locofy.ai Design Workshop for FREE LDMtokens
+[DEBUG]   Attendees: None
+[DEBUG] Event 20: 30 Minute Meeting with khayin molokwu
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 21: Jake + James
+[DEBUG]   Attendees: james@bloomgrowthagency.com, jake@viehq.com
+[DEBUG] Event 22: Meeting Reminder - Jake Bass and Onelab Ventures
+[DEBUG]   Attendees: hrushikesh@onelabventures.com, jake@viehq.com, nidhi@onelabventures.com
+[DEBUG] Event 23: Warren_Jake
+[DEBUG]   Attendees: warren@scvaults.com, jake@viehq.com
+[DEBUG] Event 24: Jake Bass and Steven Gelley
+[DEBUG]   Attendees: steve@bpv.io, jake@viehq.com
+[DEBUG] Event 25: Jake Bass & Onelab Ventures
+[DEBUG]   Attendees: hrushikesh@onelabventures.com, nidhi@onelabventures.com, fred@fireflies.ai, jake@viehq.com
+[DEBUG] Event 26: Jake Bass X Brigit (Forecastr)
+[DEBUG]   Attendees: brigit@forecastr.co, jake@viehq.com
+[DEBUG] Event 27: Vie <> TSX intro
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 28: one lab
+[DEBUG]   Attendees: None
+[DEBUG] Event 29: Vie Card / OK Capital
+[DEBUG]   Attendees: oren@okcapital.co, jake@viehq.com
+[DEBUG] Event 30: Investor Network Building
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 31: team Meet (weekly)
+[DEBUG]   Attendees: abie@viehq.com, james@viehq.com, dominic@viehq.com, jake@viehq.com
+[DEBUG] Event 32: Investors Poker Tournament (4/24)
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 33: Vie x Bloom
+[DEBUG]   Attendees: shawn@bloomgrowthagency.com, james@bloomgrowthagency.com, jake@viehq.com
+[DEBUG] Event 34: Meeting
+[DEBUG]   Attendees: jake@viehq.com, mark.peck@directedira.com
+[DEBUG] Event 35: Jake Bass and Paul Manivannan
+[DEBUG]   Attendees: jake@viehq.com, paul@macxtech.io
+[DEBUG] Event 36: Samuel Crume and Jake Bass
+[DEBUG]   Attendees: scrume@austincapital.partners, mperice@austincapital.partners, jake@viehq.com
+[DEBUG] Event 37: Ashwin Reddy and Jake Bass
+[DEBUG]   Attendees: ashwin@eosvc.com, jake@viehq.com
+[DEBUG] Event 38: Jake Bass and Rawle Annandsingh
+[DEBUG]   Attendees: rannandsingh@gmail.com, jake@viehq.com
+[DEBUG] Event 39: Jake Bass and Nick Calla
+[DEBUG]   Attendees: nick.calla@serentcapital.com, jake@viehq.com
+[DEBUG] Event 40: Jake <> Steven
+[DEBUG]   Attendees: steven@meetsteve.ai, jake@viehq.com
+[DEBUG] Event 41: Jake Bass & Onelab Ventures
+[DEBUG]   Attendees: nidhi@onelabventures.com, rahul@onelabventures.com, fred@fireflies.ai, jake@viehq.com
+[DEBUG] Event 42: Jake (VIE) @ PVS
+[DEBUG]   Attendees: andy@palmventurestudios.com, jake@viehq.com
+[DEBUG] Event 43: Vie Card / OK Capital
+[DEBUG]   Attendees: oren@okcapital.co, jake@viehq.com
+[DEBUG] Event 44: team Meet (weekly)
+[DEBUG]   Attendees: abie@viehq.com, james@viehq.com, dominic@viehq.com, jake@viehq.com
+[DEBUG] Event 45: Outreach and Initial Pitching
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 46: The Happiest Hour for Founders, VCs & Tech Leaders
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 47: New Event
+[DEBUG]   Attendees: None
+[DEBUG] Event 48: New Event
+[DEBUG]   Attendees: None
+[DEBUG] Event 49: New Event
+[DEBUG]   Attendees: None
+[DEBUG] Event 50: New Event
+[DEBUG]   Attendees: None
+[DEBUG] Event 51: New Event
+[DEBUG]   Attendees: None
+[DEBUG] Event 52: 30 Min Meeting between Maceo Jourdan and Jake Bass
+[DEBUG]   Attendees: maceo.jourdan@gmail.com, jake@viehq.com
+[DEBUG] Event 53: VIE (Jake Bass) <> FT Partners (Zach Beemer)
+[DEBUG]   Attendees: zachary.beemer@ftpartners.com, jake@viehq.com, tmp@ftpartners.com
+[DEBUG] Event 54: FI Venture Network VIP Mixer - Q2 2025
+[DEBUG]   Attendees: grads@fi.co, ryan@founderinstitute.com, andres.leon@founderinstitute.com, lara@founderinstitute.com, abs_kanji@hotmail.com, ainharan.vivek@gmail.com, amymeadows45@gmail.com, ari.aaltonen@efides.io, briandagzlzm@gmail.com, david.wishnick@gmail.com, david@baird.tech, david@curatelabs.ai, e.fuerte@meetboxie.com, fi.team@linkcare.vn, hadi@tunepact.com, heather@relyestate.com, jake@viehq.com, jasonturner@digibution.net, jillgrisez74@gmail.com, katrina.graue@gmail.com, kelechioriaku123@gmail.com, larreth@melsoft.co.za, mario@wifiportability.com, mfouladirad@gmail.com, nathanael@blackforestmushrooms.com, naxeeph96@gmail.com, octavio.carranza@vertebrar.com, olgalevchuk@gmail.com, paschal@interviewhq.ai, paulbreslow@gmail.com, rwallace@omnihelmets.com, thanhbon@gmail.com, tmoodley@ndeipi.com, viratstreams@gmail.com, ty.moodley@gmail.com, mario.soave@cleverfi.com, larreth@melsoft.io, paschal.amaechi@gmail.com, chris@christopherbrereton.com, gv@network.vc, nick.ponomarev@orbitstartups.com, biz@kairosaerotechnologies.com, christopher.liebau@plances.de, dima@skillsy.me, leo@daftonmedia.ai, mhoecherl@domunus.com, mkandlagunta@sclanet.com, nick.tsang@skyfareracademy.com, silochi1@outlook.com
+[DEBUG] Event 55: FI Venture Network Q2 VIP Networking with Investors, Alumni, Leaders & Advisors
+[DEBUG]   Attendees: None
+[DEBUG] Event 56: FI Venture Network Q2 VIP Networking with Investors, Alumni, Leaders & Advisors
+[DEBUG]   Attendees: None
+[DEBUG] Event 57: undefined
+[DEBUG]   Attendees: None
+[DEBUG] Event 58: Jake Bass and Simon Bartem
+[DEBUG]   Attendees: simonbartem@gmail.com, jake@viehq.com
+[DEBUG] Event 59: Igor + Alexandra (CommonOcean VC) // Intro with Jake Bass (Vie)
+[DEBUG]   Attendees: mihaescua@gmail.com, igor.ulis@gmail.com, jake@viehq.com
+[DEBUG] Event 60: Hiring Sync
+[DEBUG]   Attendees: jake@viehq.com, thomas@shieldsgroupsearch.com
+[DEBUG] Event 61: 30 Min Meeting between Sean Tepper and Jake Bass
+[DEBUG]   Attendees: seantepper@gmail.com, jake@viehq.com
+[DEBUG] Event 62: Jake Bass and Diana Stepner
+[DEBUG]   Attendees: dianas@gmail.com, jake@viehq.com
+[DEBUG] Event 63: Cooper LaRue and Jake Bass
+[DEBUG]   Attendees: cooper@amfamventures.com, jake@viehq.com
+[DEBUG] Event 64: team Meet (weekly)
+[DEBUG]   Attendees: abie@viehq.com, james@viehq.com, dominic@viehq.com, jake@viehq.com
+[DEBUG] Event 65: Campaign Refinement
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 66: Vie <> Eksim VC 
+[DEBUG]   Attendees: jake@viehq.com, inalcan.gulec.tr@gmail.com, rannandsingh@gmail.com, inalcan.gulec@eksim.vc
+[DEBUG] Event 67: Fundraising Readiness Reviews (Jake Bass)
+[DEBUG]   Attendees: portfolio@founderinstitute.com, ryan@founderinstitute.com, andres.leon@founderinstitute.com, jake@viehq.com
+[DEBUG] Event 68: Vie Introduction
+[DEBUG]   Attendees: jake@viehq.com, jrosa@rbwcap.com
+[DEBUG] Event 69: Jordan / Jake
+[DEBUG]   Attendees: jrosa@rbwcap.com, jake@viehq.com
+[DEBUG] Event 70: Fundraising Readiness Reviews (Jake Bass)
+[DEBUG]   Attendees: portfolio@founderinstitute.com, ryan@founderinstitute.com, andres.leon@founderinstitute.com, jake@viehq.com
+[DEBUG] Event 71: Jake Bass and Anish Zuté
+[DEBUG]   Attendees: anish@drivecapital.com, jake@viehq.com
+[DEBUG] Event 72: Fundraising Readiness Review
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 73: team Meet (weekly)
+[DEBUG]   Attendees: abie@viehq.com, james@viehq.com, dominic@viehq.com, jake@viehq.com
+[DEBUG] Event 74: Vie and CME-Invest
+[DEBUG]   Attendees: j.choucair@cme-invest.com, jake@viehq.com
+[DEBUG] Event 75: Jake Bass and Ignacio Castro
+[DEBUG]   Attendees: ic@128vc.com, jake@viehq.com, icastro@santander.us
+[DEBUG] Event 76: milk
+[DEBUG]   Attendees: None
+[DEBUG] Event 77: milk
+[DEBUG]   Attendees: None
+[DEBUG] Event 78: Milk
+[DEBUG]   Attendees: None
+[DEBUG] Event 79: Milk
+[DEBUG]   Attendees: None
+[DEBUG] Event 80: Jake Bass and Bryan Yankton
+[DEBUG]   Attendees: bryan@weraiseco.io, jake@viehq.com
+[DEBUG] Event 81: SOCIETE PRIVÉE D'INVESTISSEMENTS MOBILIÈRS S.A (SPIM)
+[DEBUG]   Attendees: None
+[DEBUG] Event 82: SelfERP Intro Call (30 min) (Jake Bass)
+[DEBUG]   Attendees: viacheslav.snizhko@self-erp.com, vt@self-erp.com, jake@viehq.com
+[DEBUG] Event 83: Vie Introduction
+[DEBUG]   Attendees: mike@bps.ventures, jake@viehq.com
+[DEBUG] Event 84: Texas 
+[DEBUG]   Attendees: jake@viehq.com, simon.draper@growersedge.com
+[DEBUG] Event 85: Jake (Vie) x VF Intro
+[DEBUG]   Attendees: tanzeel@virtual-force.com, jake@viehq.com, khurram.riaz@virtualforce.io
+[DEBUG] Event 86: team Meet (weekly)
+[DEBUG]   Attendees: abie@viehq.com, james@viehq.com, dominic@viehq.com, jake@viehq.com
+[DEBUG] Event 87: Pitching, Negotiating, and Closing
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 88: LvlUp Labs Infosession
+[DEBUG]   Attendees: jake@viehq.com
+[DEBUG] Event 89: Jake X Tristan - Dinner @MEXTA
+[DEBUG]   Attendees: jake@viehq.com, solutions@trizan.ca
+[DEBUG] Event "Reddit | Vie | Media Plan": INCLUDED
+[DEBUG] Event "CANCELED -Jake Bass - Legacy Makers Casting Call": INCLUDED
+[DEBUG] Event "Canceled: Vie x Forecastr Kickoff and Mallory Jennings": INCLUDED
+[DEBUG] Event "Woodstock in Texas Discussion": INCLUDED
+[DEBUG] Event "Jake Bass - Legacy Makers Casting Call": INCLUDED
+[DEBUG] Event "Funding Lab Kickoff: Intro to Fundraising": INCLUDED
+[DEBUG] Event "team Meet (weekly)": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "Plaid & Vie | Account Manager Sync": INCLUDED
+[DEBUG] Event "Crafting an Investor-Ready Pitch Deck (+ How Zendesk Helps You Scale Post-Raise)": INCLUDED
+[DEBUG] Event "Fundraising Setup": INCLUDED
+[DEBUG] Event "Scaling Smart: HR Foundations for Fast-Growing Startups": INCLUDED
+[DEBUG] Event "[HOLD] Founder Night Out : Post-FounderX x SXSW Edition": INCLUDED
+[DEBUG] Event "Founder Night Out: Post-FounderX x SXSW Edition": INCLUDED
+[DEBUG] Event "Fundraising Advisors": INCLUDED
+[DEBUG] Event "team Meet (weekly)": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "Vie Card - BankTech Ventures": INCLUDED
+[DEBUG] Event "Intro - Jake Bass(Vie) x Maria Jose Arrea": INCLUDED
+[DEBUG] Event "Jake Bass and Jeff Erickson": INCLUDED
+[DEBUG] Event "Locofy.ai Design Workshop for FREE LDMtokens": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "30 Minute Meeting with khayin molokwu": INCLUDED
+[DEBUG] Event "Jake + James": INCLUDED
+[DEBUG] Event "Meeting Reminder - Jake Bass and Onelab Ventures": INCLUDED
+[DEBUG] Event "Warren_Jake": INCLUDED
+[DEBUG] Event "Jake Bass and Steven Gelley": INCLUDED
+[DEBUG] Event "Jake Bass & Onelab Ventures": INCLUDED
+[DEBUG] Event "Jake Bass X Brigit (Forecastr)": INCLUDED
+[DEBUG] Event "Vie <> TSX intro": INCLUDED
+[DEBUG] Event "one lab": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "Vie Card / OK Capital": INCLUDED
+[DEBUG] Event "Investor Network Building": INCLUDED
+[DEBUG] Event "team Meet (weekly)": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "Investors Poker Tournament (4/24)": INCLUDED
+[DEBUG] Event "Vie x Bloom": INCLUDED
+[DEBUG] Event "Meeting": INCLUDED
+[DEBUG] Event "Jake Bass and Paul Manivannan": INCLUDED
+[DEBUG] Event "Samuel Crume and Jake Bass": INCLUDED
+[DEBUG] Event "Ashwin Reddy and Jake Bass": INCLUDED
+[DEBUG] Event "Jake Bass and Rawle Annandsingh": INCLUDED
+[DEBUG] Event "Jake Bass and Nick Calla": INCLUDED
+[DEBUG] Event "Jake <> Steven": INCLUDED
+[DEBUG] Event "Jake Bass & Onelab Ventures": INCLUDED
+[DEBUG] Event "Jake (VIE) @ PVS": INCLUDED
+[DEBUG] Event "Vie Card / OK Capital": INCLUDED
+[DEBUG] Event "team Meet (weekly)": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "Outreach and Initial Pitching": INCLUDED
+[DEBUG] Event "The Happiest Hour for Founders, VCs & Tech Leaders": INCLUDED
+[DEBUG] Event "New Event": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "New Event": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "New Event": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "New Event": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "New Event": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "30 Min Meeting between Maceo Jourdan and Jake Bass": INCLUDED
+[DEBUG] Event "VIE (Jake Bass) <> FT Partners (Zach Beemer)": INCLUDED
+[DEBUG] Event "FI Venture Network VIP Mixer - Q2 2025": INCLUDED
+[DEBUG] Event "FI Venture Network Q2 VIP Networking with Investors, Alumni, Leaders & Advisors": INCLUDED
+[DEBUG] Event "FI Venture Network Q2 VIP Networking with Investors, Alumni, Leaders & Advisors": INCLUDED
+[DEBUG] Event "undefined": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "Jake Bass and Simon Bartem": INCLUDED
+[DEBUG] Event "Igor + Alexandra (CommonOcean VC) // Intro with Jake Bass (Vie)": INCLUDED
+[DEBUG] Event "Hiring Sync": INCLUDED
+[DEBUG] Event "30 Min Meeting between Sean Tepper and Jake Bass": INCLUDED
+[DEBUG] Event "Jake Bass and Diana Stepner": INCLUDED
+[DEBUG] Event "Cooper LaRue and Jake Bass": INCLUDED
+[DEBUG] Event "team Meet (weekly)": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "Campaign Refinement": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "Vie <> Eksim VC ": INCLUDED
+[DEBUG] Event "Fundraising Readiness Reviews (Jake Bass)": INCLUDED
+[DEBUG] Event "Vie Introduction": INCLUDED
+[DEBUG] Event "Jordan / Jake": INCLUDED
+[DEBUG] Event "Fundraising Readiness Reviews (Jake Bass)": INCLUDED
+[DEBUG] Event "Jake Bass and Anish Zuté": INCLUDED
+[DEBUG] Event "Fundraising Readiness Review": INCLUDED
+[DEBUG] Event "team Meet (weekly)": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "Vie and CME-Invest": INCLUDED
+[DEBUG] Event "Jake Bass and Ignacio Castro": INCLUDED
+[DEBUG] Event "milk": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "milk": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "Milk": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "Milk": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "Jake Bass and Bryan Yankton": INCLUDED
+[DEBUG] Event "SOCIETE PRIVÉE D'INVESTISSEMENTS MOBILIÈRS S.A (SPIM)": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "SelfERP Intro Call (30 min) (Jake Bass)": INCLUDED
+[DEBUG] Event "Vie Introduction": INCLUDED
+[DEBUG] Event "Texas ": INCLUDED
+[DEBUG] Event "Jake (Vie) x VF Intro": INCLUDED
+[DEBUG] Event "team Meet (weekly)": FILTERED OUT
+[DEBUG]   - Keywords: false, VC patterns: false, Business attendees: false
+[DEBUG] Event "Pitching, Negotiating, and Closing": INCLUDED
+[DEBUG] Event "LvlUp Labs Infosession": INCLUDED
+[DEBUG] Event "Jake X Tristan - Dinner @MEXTA": INCLUDED
+[DEBUG] Events after filtering: 68
+[SYNC] 2025-05-26T22:22:20.748Z: Found 68 calendar events
+[SYNC] 2025-05-26T22:22:21.424Z: Found 196 existing contacts
+[SYNC] 2025-05-26T22:22:21.424Z: Processing event: Reddit | Vie | Media Plan
+[SYNC] 2025-05-26T22:22:22.445Z: Processing event: CANCELED -Jake Bass - Legacy Makers Casting Call
+[SYNC] 2025-05-26T22:22:49.169Z: Processing event: Canceled: Vie x Forecastr Kickoff and Mallory Jennings
+[SYNC] 2025-05-26T22:22:54.809Z: Retrieved transcript for jake@viehq.com - 41923 characters
+[SYNC] 2025-05-26T22:22:54.809Z: Found transcript for jake@viehq.com
+[SYNC] 2025-05-26T22:22:55.629Z: AI analysis error: 404 The model `gpt-4` does not exist or you do not have access to it.
+[SYNC] 2025-05-26T22:22:55.629Z: AI analysis completed for jake@viehq.com
+[SYNC] 2025-05-26T22:22:55.629Z: Status: Under Review, Next Step: Manual review required
+[SYNC] 2025-05-26T22:22:55.629Z: Processing event: Woodstock in Texas Discussion
+[SYNC] 2025-05-26T22:23:10.468Z: Retrieved transcript for morten.lund@gmail.com - 41923 characters
+[SYNC] 2025-05-26T22:23:10.468Z: Found transcript for morten.lund@gmail.com
+[SYNC] 2025-05-26T22:23:10.654Z: AI analysis error: 404 The model `gpt-4` does not exist or you do not have access to it.
+[SYNC] 2025-05-26T22:23:10.654Z: AI analysis completed for morten.lund@gmail.com
+[SYNC] 2025-05-26T22:23:10.654Z: Status: Under Review, Next Step: Manual review required
+[SYNC] 2025-05-26T22:23:12.196Z: Retrieved transcript for jake@viehq.com - 41923 characters
+[SYNC] 2025-05-26T22:23:12.196Z: Found transcript for jake@viehq.com
+[SYNC] 2025-05-26T22:23:12.330Z: AI analysis error: 404 The model `gpt-4` does not exist or you do not have access to it.
+[SYNC] 2025-05-26T22:23:12.331Z: AI analysis completed for jake@viehq.com
+[SYNC] 2025-05-26T22:23:12.331Z: Status: Under Review, Next Step: Manual review required
+[SYNC] 2025-05-26T22:23:28.318Z: Retrieved transcript for simon@nxel.co - 41923 characters
+[SYNC] 2025-05-26T22:23:28.318Z: Found transcript for simon@nxel.co
+[SYNC] 2025-05-26T22:23:28.516Z: AI analysis error: 404 The model `gpt-4` does not exist or you do not have access to it.
+[SYNC] 2025-05-26T22:23:28.516Z: AI analysis completed for simon@nxel.co
+[SYNC] 2025-05-26T22:23:28.516Z: Status: Under Review, Next Step: Manual review required
+[SYNC] 2025-05-26T22:23:28.516Z: Processing event: Jake Bass - Legacy Makers Casting Call
+[SYNC] 2025-05-26T22:23:32.458Z: Retrieved transcript for jake@viehq.com - 41923 characters
+[SYNC] 2025-05-26T22:23:32.458Z: Found transcript for jake@viehq.com
+[SYNC] 2025-05-26T22:23:32.559Z: AI analysis error: 404 The model `gpt-4` does not exist or you do not have access to it.
+[SYNC] 2025-05-26T22:23:32.559Z: AI analysis completed for jake@viehq.com
+[SYNC] 2025-05-26T22:23:32.560Z: Status: Under Review, Next Step: Manual review required
+[SYNC] 2025-05-26T22:23:32.560Z: Processing event: Funding Lab Kickoff: Intro to Fundraising
+[SYNC] 2025-05-26T22:23:33.101Z: Processing event: Plaid & Vie | Account Manager Sync
+[SYNC] 2025-05-26T22:23:35.971Z: Retrieved transcript for jake@viehq.com - 36013 characters
+[SYNC] 2025-05-26T22:23:35.972Z: Found transcript for jake@viehq.com
+[SYNC] 2025-05-26T22:23:36.061Z: AI analysis error: 404 The model `gpt-4` does not exist or you do not have access to it.
+[SYNC] 2025-05-26T22:23:36.061Z: AI analysis completed for jake@viehq.com
+[SYNC] 2025-05-26T22:23:36.061Z: Status: Under Review, Next Step: Manual review required
+[SYNC] 2025-05-26T22:23:36.062Z: Processing event: Crafting an Investor-Ready Pitch Deck (+ How Zendesk Helps You Scale Post-Raise)
+[SYNC] 2025-05-26T22:23:41.093Z: Retrieved transcript for jake@viehq.com - 36013 characters
+[SYNC] 2025-05-26T22:23:41.094Z: Found transcript for jake@viehq.com
+[SYNC] 2025-05-26T22:23:41.261Z: AI analysis error: 404 The model `gpt-4` does not exist or you do not have access to it.
+[SYNC] 2025-05-26T22:23:41.261Z: AI analysis completed for jake@viehq.com
+[SYNC] 2025-05-26T22:23:41.261Z: Status: Under Review, Next Step: Manual review required
+[SYNC] 2025-05-26T22:23:41.261Z: Processing event: Fundraising Setup
+[SYNC] 2025-05-26T22:23:46.178Z: Retrieved transcript for jake@viehq.com - 36013 characters
+[SYNC] 2025-05-26T22:23:46.178Z: Found transcript for jake@viehq.com
+[SYNC] 2025-05-26T22:23:46.337Z: AI analysis error: 404 The model `gpt-4` does not exist or you do not have access to it.
+[SYNC] 2025-05-26T22:23:46.337Z: AI analysis completed for jake@viehq.com
+[SYNC] 2025-05-26T22:23:46.337Z: Status: Under Review, Next Step: Manual review required
+[SYNC] 2025-05-26T22:23:46.337Z: Processing event: Scaling Smart: HR Foundations for Fast-Growing Startups
+[SYNC] 2025-05-26T22:23:56.861Z: Processing event: [HOLD] Founder Night Out : Post-FounderX x SXSW Edition
+[SYNC] 2025-05-26T22:24:31.357Z: Processing event: Founder Night Out: Post-FounderX x SXSW Edition
+[SYNC] 2025-05-26T22:24:32.597Z: Processing event: Fundraising Advisors
+[SYNC] 2025-05-26T22:24:34.337Z: Processing event: Vie Card - BankTech Ventures
+[SYNC] 2025-05-26T22:24:38.946Z: Processing event: Intro - Jake Bass(Vie) x Maria Jose Arrea
+[SYNC] 2025-05-26T22:24:44.576Z: Processing event: Jake Bass and Jeff Erickson
+[SYNC] 2025-05-26T22:25:05.058Z: Processing event: 30 Minute Meeting with khayin molokwu
+[SYNC] 2025-05-26T22:25:05.330Z: Processing event: Jake + James
+[SYNC] 2025-05-26T22:25:05.891Z: Processing event: Meeting Reminder - Jake Bass and Onelab Ventures
+[SYNC] 2025-05-26T22:25:06.700Z: Processing event: Warren_Jake
+[SYNC] 2025-05-26T22:25:07.210Z: Processing event: Jake Bass and Steven Gelley
+[SYNC] 2025-05-26T22:25:07.723Z: Processing event: Jake Bass & Onelab Ventures
+[SYNC] 2025-05-26T22:25:08.786Z: Processing event: Jake Bass X Brigit (Forecastr)
+[SYNC] 2025-05-26T22:25:09.256Z: Processing event: Vie <> TSX intro
+[SYNC] 2025-05-26T22:25:09.490Z: Processing event: Vie Card / OK Capital
+[SYNC] 2025-05-26T22:25:09.962Z: Processing event: Investor Network Building
+[SYNC] 2025-05-26T22:25:19.291Z: Processing event: Investors Poker Tournament (4/24)
+[SYNC] 2025-05-26T22:25:19.514Z: Processing event: Vie x Bloom
+[SYNC] 2025-05-26T22:25:21.304Z: Processing event: Meeting
+[SYNC] 2025-05-26T22:25:21.810Z: Processing event: Jake Bass and Paul Manivannan
+[SYNC] 2025-05-26T22:25:22.320Z: Processing event: Samuel Crume and Jake Bass
+[SYNC] 2025-05-26T22:25:23.104Z: Processing event: Ashwin Reddy and Jake Bass
+[SYNC] 2025-05-26T22:25:27.940Z: Processing event: Jake Bass and Rawle Annandsingh
+[SYNC] 2025-05-26T22:25:34.342Z: Processing event: Jake Bass and Nick Calla
+[SYNC] 2025-05-26T22:25:40.416Z: Processing event: Jake <> Steven
+[SYNC] 2025-05-26T22:25:48.879Z: Processing event: Jake Bass & Onelab Ventures
+[SYNC] 2025-05-26T22:25:57.691Z: Processing event: Jake (VIE) @ PVS
+[SYNC] 2025-05-26T22:26:05.947Z: Processing event: Vie Card / OK Capital
+[SYNC] 2025-05-26T22:26:06.405Z: Processing event: Outreach and Initial Pitching
+[SYNC] 2025-05-26T22:26:06.703Z: Processing event: The Happiest Hour for Founders, VCs & Tech Leaders
+[SYNC] 2025-05-26T22:26:08.030Z: Processing event: 30 Min Meeting between Maceo Jourdan and Jake Bass
+[SYNC] 2025-05-26T22:26:11.310Z: Processing event: VIE (Jake Bass) <> FT Partners (Zach Beemer)
+[SYNC] 2025-05-26T22:26:12.041Z: Processing event: FI Venture Network VIP Mixer - Q2 2025
+[SYNC] 2025-05-26T22:26:44.208Z: Processing event: FI Venture Network Q2 VIP Networking with Investors, Alumni, Leaders & Advisors
+[SYNC] 2025-05-26T22:26:44.210Z: Processing event: FI Venture Network Q2 VIP Networking with Investors, Alumni, Leaders & Advisors
+[SYNC] 2025-05-26T22:26:44.210Z: Processing event: Jake Bass and Simon Bartem
+[SYNC] 2025-05-26T22:26:44.645Z: Processing event: Igor + Alexandra (CommonOcean VC) // Intro with Jake Bass (Vie)
+[SYNC] 2025-05-26T22:26:45.371Z: Processing event: Hiring Sync
+[SYNC] 2025-05-26T22:26:45.893Z: Processing event: 30 Min Meeting between Sean Tepper and Jake Bass
+[SYNC] 2025-05-26T22:26:46.404Z: Processing event: Jake Bass and Diana Stepner
+[SYNC] 2025-05-26T22:26:46.858Z: Processing event: Cooper LaRue and Jake Bass
+[SYNC] 2025-05-26T22:26:48.379Z: Processing event: Vie <> Eksim VC 
+[SYNC] 2025-05-26T22:26:49.297Z: Processing event: Fundraising Readiness Reviews (Jake Bass)
+[SYNC] 2025-05-26T22:26:50.682Z: Processing event: Vie Introduction
+[SYNC] 2025-05-26T22:26:52.538Z: Processing event: Jordan / Jake
+[SYNC] 2025-05-26T22:26:53.089Z: Processing event: Fundraising Readiness Reviews (Jake Bass)
+[SYNC] 2025-05-26T22:26:54.264Z: Processing event: Jake Bass and Anish Zuté
+[SYNC] 2025-05-26T22:26:55.035Z: Processing event: Fundraising Readiness Review
+[SYNC] 2025-05-26T22:26:55.316Z: Processing event: Vie and CME-Invest
+[SYNC] 2025-05-26T22:26:57.021Z: Processing event: Jake Bass and Ignacio Castro
+[SYNC] 2025-05-26T22:26:57.859Z: Processing event: Jake Bass and Bryan Yankton
+[SYNC] 2025-05-26T22:26:58.548Z: Processing event: SelfERP Intro Call (30 min) (Jake Bass)
+[SYNC] 2025-05-26T22:26:59.354Z: Processing event: Vie Introduction
+[SYNC] 2025-05-26T22:26:59.801Z: Processing event: Texas 
+[SYNC] 2025-05-26T22:27:00.259Z: Processing event: Jake (Vie) x VF Intro
+[SYNC] 2025-05-26T22:27:01.005Z: Processing event: Pitching, Negotiating, and Closing
+[SYNC] 2025-05-26T22:27:01.227Z: Processing event: LvlUp Labs Infosession
+[SYNC] 2025-05-26T22:27:01.494Z: Processing event: Jake X Tristan - Dinner @MEXTA
+[SYNC] 2025-05-26T22:27:02.233Z: Updated 191 contacts in Google Sheets
+[SYNC] 2025-05-26T22:27:03.288Z: Sync process completed successfully
+ POST /api/sync 200 in 283760ms
+ ✓ Compiled in 103ms (50 modules)
+ ✓ Compiled /api/sync in 209ms (69 modules)
+[SYNC] 2025-05-26T22:28:05.413Z: Starting sync process...
+[SYNC] 2025-05-26T22:28:05.507Z: Google authentication successful
