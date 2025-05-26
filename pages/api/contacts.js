@@ -1,7 +1,18 @@
 import { google } from 'googleapis'
 
 const getGoogleAuth = () => {
-  const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n')
+  // Properly format the private key by ensuring proper line breaks
+  let privateKey = process.env.GOOGLE_PRIVATE_KEY
+  if (privateKey) {
+    // Replace literal \n with actual line breaks
+    privateKey = privateKey.replace(/\\n/g, '\n')
+    // Ensure the key has proper formatting
+    if (!privateKey.includes('\n')) {
+      privateKey = privateKey.replace(/-----BEGIN PRIVATE KEY-----/, '-----BEGIN PRIVATE KEY-----\n')
+      privateKey = privateKey.replace(/-----END PRIVATE KEY-----/, '\n-----END PRIVATE KEY-----')
+      privateKey = privateKey.replace(/(.{64})/g, '$1\n')
+    }
+  }
   
   return new google.auth.JWT(
     process.env.GOOGLE_SERVICE_EMAIL,
