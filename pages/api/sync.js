@@ -191,16 +191,42 @@ async function getCalendarEvents(auth) {
     maxResults: 250
   })
 
-  // Filter events by investor-related keywords
-  const keywords = ['investor', 'pitch', 'intro', 'funding', 'vc', 'investment', 'demo', 'meeting', 'vie']
+  // Enhanced filtering for investor-related meetings
+  const keywords = ['investor', 'pitch', 'intro', 'funding', 'vc', 'investment', 'demo', 'meeting', 'vie', 'capital', 'ventures', 'fund', 'consultation', 'session', 'call', 'sync', 'discussion']
+  
+  // VC/investor company patterns
+  const vcPatterns = [
+    /ventures?/i, /capital/i, /\bfund\b/i, /partners?/i, /investments?/i,
+    /\.vc/i, /@.*ventures/i, /@.*capital/i, /@.*fund/i
+  ]
   
   return response.data.items?.filter(event => {
     const title = (event.summary || '').toLowerCase()
     const description = (event.description || '').toLowerCase()
+    const attendeeEmails = event.attendees?.map(a => a.email?.toLowerCase()).filter(Boolean) || []
+    const organizerEmail = event.organizer?.email?.toLowerCase() || ''
     
-    return keywords.some(keyword => 
+    // Check for keywords in title/description
+    const hasKeywords = keywords.some(keyword => 
       title.includes(keyword) || description.includes(keyword)
     )
+    
+    // Check for VC/investor patterns in emails or title
+    const hasVCPatterns = vcPatterns.some(pattern => 
+      pattern.test(title) || pattern.test(description) ||
+      [...attendeeEmails, organizerEmail].some(email => pattern.test(email))
+    )
+    
+    // Check if it has external business attendees (not personal gmail/yahoo etc)
+    const hasBusinessAttendees = attendeeEmails.some(email => 
+      !email.includes('viehq.com') && 
+      !email.includes('gmail.com') && 
+      !email.includes('yahoo.com') &&
+      !email.includes('hotmail.com') &&
+      email.includes('@')
+    )
+    
+    return hasKeywords || hasVCPatterns || hasBusinessAttendees
   }) || []
 }
 
