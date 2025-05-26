@@ -182,28 +182,15 @@ async function getCalendarEvents(auth) {
   const now = new Date()
   const sixtyDaysAgo = new Date(now.getTime() - (60 * 24 * 60 * 60 * 1000))
   
-  // Try both primary calendar and the user's main calendar
-  let response
-  try {
-    response = await calendar.events.list({
-      calendarId: 'primary',
-      timeMin: sixtyDaysAgo.toISOString(),
-      timeMax: now.toISOString(),
-      singleEvents: true,
-      orderBy: 'startTime',
-      maxResults: 250
-    })
-  } catch (error) {
-    // If primary fails, try the user's email as calendar ID
-    response = await calendar.events.list({
-      calendarId: 'jake@viehq.com',
-      timeMin: sixtyDaysAgo.toISOString(),
-      timeMax: now.toISOString(),
-      singleEvents: true,
-      orderBy: 'startTime',
-      maxResults: 250
-    })
-  }
+  // Use the working calendar ID directly
+  const response = await calendar.events.list({
+    calendarId: 'jake@viehq.com',
+    timeMin: sixtyDaysAgo.toISOString(),
+    timeMax: now.toISOString(),
+    singleEvents: true,
+    orderBy: 'startTime',
+    maxResults: 250
+  })
 
   // Enhanced filtering for investor-related meetings
   const keywords = ['investor', 'pitch', 'intro', 'funding', 'vc', 'investment', 'demo', 'meeting', 'vie', 'capital', 'ventures', 'fund', 'consultation', 'session', 'call', 'sync', 'discussion']
@@ -214,7 +201,16 @@ async function getCalendarEvents(auth) {
     /\.vc/i, /@.*ventures/i, /@.*capital/i, /@.*fund/i
   ]
   
-  return response.data.items?.filter(event => {
+  const allEvents = response.data.items || []
+  
+  // Log all events for debugging
+  console.log(`[DEBUG] Total events before filtering: ${allEvents.length}`)
+  allEvents.forEach((event, index) => {
+    console.log(`[DEBUG] Event ${index + 1}: ${event.summary}`)
+    console.log(`[DEBUG]   Attendees: ${event.attendees?.map(a => a.email).join(', ') || 'None'}`)
+  })
+  
+  const filteredEvents = allEvents.filter(event => {
     const title = (event.summary || '').toLowerCase()
     const description = (event.description || '').toLowerCase()
     const attendeeEmails = event.attendees?.map(a => a.email?.toLowerCase()).filter(Boolean) || []
@@ -240,8 +236,18 @@ async function getCalendarEvents(auth) {
       email.includes('@')
     )
     
-    return hasKeywords || hasVCPatterns || hasBusinessAttendees
-  }) || []
+    const matchesFilter = hasKeywords || hasVCPatterns || hasBusinessAttendees
+    
+    console.log(`[DEBUG] Event "${event.summary}": ${matchesFilter ? 'INCLUDED' : 'FILTERED OUT'}`)
+    if (!matchesFilter) {
+      console.log(`[DEBUG]   - Keywords: ${hasKeywords}, VC patterns: ${hasVCPatterns}, Business attendees: ${hasBusinessAttendees}`)
+    }
+    
+    return matchesFilter
+  })
+  
+  console.log(`[DEBUG] Events after filtering: ${filteredEvents.length}`)
+  return filteredEvents
 }
 
 // Get existing contacts from Google Sheets
