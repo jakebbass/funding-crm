@@ -321,36 +321,31 @@ async function getFirefliesTranscript(email, meetingDate) {
   const endDate = new Date(searchDate.getTime() + (24 * 60 * 60 * 1000))   // 1 day after
 
   try {
-    const response = await axios.get('https://api.fireflies.ai/graphql', {
+    // Use POST method with correct GraphQL query structure
+    const response = await axios.post('https://api.fireflies.ai/graphql', {
+      query: `
+        query GetTranscripts($fromDate: DateTime!, $toDate: DateTime!) {
+          transcripts(
+            fromDate: $fromDate,
+            toDate: $toDate,
+            limit: 50
+          ) {
+            id
+            title
+            date
+            transcript_text
+            participants
+          }
+        }
+      `,
+      variables: {
+        fromDate: startDate.toISOString(),
+        toDate: endDate.toISOString()
+      }
+    }, {
       headers: {
         'Authorization': `Bearer ${process.env.FIREFLIES_API_KEY}`,
         'Content-Type': 'application/json'
-      },
-      data: {
-        query: `
-          query GetTranscripts($userId: String!, $startDate: DateTime!, $endDate: DateTime!) {
-            transcripts(
-              user_id: $userId,
-              start_date: $startDate,
-              end_date: $endDate,
-              limit: 10
-            ) {
-              id
-              title
-              date
-              transcript_text
-              participants {
-                email
-                name
-              }
-            }
-          }
-        `,
-        variables: {
-          userId: email,
-          startDate: startDate.toISOString(),
-          endDate: endDate.toISOString()
-        }
       }
     })
 
@@ -358,12 +353,13 @@ async function getFirefliesTranscript(email, meetingDate) {
     
     // Find transcript with matching participant email
     const matchingTranscript = transcripts.find(t => 
-      t.participants?.some(p => p.email === email)
+      Array.isArray(t.participants) && t.participants.includes(email)
     )
 
     return matchingTranscript?.transcript_text || null
     
   } catch (error) {
+    logMessage(`Fireflies API error details: ${JSON.stringify(error.response?.data || error.message)}`)
     throw new Error(`Fireflies API error: ${error.message}`)
   }
 }
