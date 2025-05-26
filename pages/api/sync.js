@@ -182,14 +182,28 @@ async function getCalendarEvents(auth) {
   const now = new Date()
   const sixtyDaysAgo = new Date(now.getTime() - (60 * 24 * 60 * 60 * 1000))
   
-  const response = await calendar.events.list({
-    calendarId: 'primary',
-    timeMin: sixtyDaysAgo.toISOString(),
-    timeMax: now.toISOString(),
-    singleEvents: true,
-    orderBy: 'startTime',
-    maxResults: 250
-  })
+  // Try both primary calendar and the user's main calendar
+  let response
+  try {
+    response = await calendar.events.list({
+      calendarId: 'primary',
+      timeMin: sixtyDaysAgo.toISOString(),
+      timeMax: now.toISOString(),
+      singleEvents: true,
+      orderBy: 'startTime',
+      maxResults: 250
+    })
+  } catch (error) {
+    // If primary fails, try the user's email as calendar ID
+    response = await calendar.events.list({
+      calendarId: 'jake@viehq.com',
+      timeMin: sixtyDaysAgo.toISOString(),
+      timeMax: now.toISOString(),
+      singleEvents: true,
+      orderBy: 'startTime',
+      maxResults: 250
+    })
+  }
 
   // Enhanced filtering for investor-related meetings
   const keywords = ['investor', 'pitch', 'intro', 'funding', 'vc', 'investment', 'demo', 'meeting', 'vie', 'capital', 'ventures', 'fund', 'consultation', 'session', 'call', 'sync', 'discussion']
