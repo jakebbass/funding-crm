@@ -3,7 +3,7 @@ import OpenAI from 'openai'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 import axios from 'axios'
 
-// Initialize Google Sheets and Calendar APIs
+// Initialize Google Sheets, Calendar, and Gmail APIs
 const getGoogleAuth = () => {
   // Properly format the private key by ensuring proper line breaks
   let privateKey = process.env.GOOGLE_PRIVATE_KEY
@@ -24,7 +24,8 @@ const getGoogleAuth = () => {
     privateKey,
     [
       'https://www.googleapis.com/auth/spreadsheets',
-      'https://www.googleapis.com/auth/calendar.readonly'
+      'https://www.googleapis.com/auth/calendar.readonly',
+      'https://www.googleapis.com/auth/gmail.readonly'
     ]
   )
 }
@@ -100,21 +101,21 @@ export default async function handler(req, res) {
             }
           }
 
-          // Get meeting transcript if available
-          let transcript = null
+          // Get meeting notes from multiple sources
+          let meetingNotes = null
           try {
-            transcript = await getFirefliesTranscript(email, event.start?.dateTime)
-            if (transcript) {
-              logMessage(`Found transcript for ${email}`)
+            meetingNotes = await getMeetingNotes(email, event.start?.dateTime, event.summary, auth)
+            if (meetingNotes) {
+              logMessage(`Found meeting notes for ${email} from ${meetingNotes.source}`)
             }
           } catch (error) {
-            logMessage(`No transcript found for ${email}: ${error.message}`)
+            logMessage(`No meeting notes found for ${email}: ${error.message}`)
           }
 
-          // Use AI to analyze the meeting
-          if (transcript) {
+          // Use AI to analyze the meeting notes
+          if (meetingNotes) {
             try {
-              const analysis = await analyzeWithAI(transcript, contact.name || email)
+              const analysis = await analyzeWithAI(meetingNotes.content, contact.name || email, meetingNotes.source)
               
               // Update contact with AI analysis
               contact.status = analysis.status || contact.status
@@ -173,6 +174,150 @@ export default async function handler(req, res) {
       timestamp: new Date().toISOString()
     })
   }
+}
+
+// Get meeting notes from multiple sources (Fireflies + Gmail)
+async function getMeetingNotes(email, meetingDate, meetingTitle, auth) {
+  // Try Fireflies first
+  try {
+    if (process.env.FIREFLIES_API_KEY) {
+      const firefliesTranscript = await getFirefliesTranscript(email, meetingDate)
+      if (firefliesTranscript) {
+        return {
+          content: firefliesTranscript,
+          source: 'Fireflies'
+        }
+      }
+    }
+  } catch (error) {
+    logMessage(`Fireflies failed for ${email}: ${error.message}`)
+  }
+
+  // Try Gmail as backup
+  try {
+    const gmailSummary = await getGmailMeetingRecap(email, meetingDate, meetingTitle, auth)
+    if (gmailSummary) {
+      return {
+        content: gmailSummary,
+        source: 'Gmail'
+      }
+    }
+  } catch (error) {
+    logMessage(`Gmail search failed for ${email}: ${error.message}`)
+  }
+
+  return null
+}
+
+// Get meeting recap from Gmail
+async function getGmailMeetingRecap(email, meetingDate, meetingTitle, auth) {
+  const gmail = google.gmail({ version: 'v1', auth })
+  
+  // Search for emails around the meeting date
+  const searchDate = new Date(meetingDate)
+  const dayBefore = new Date(searchDate.getTime() - (24 * 60 * 60 * 1000))
+  const dayAfter = new Date(searchDate.getTime() + (48 * 60 * 60 * 1000)) // Search 2 days after for follow-ups
+  
+  // Create search query for meeting-related emails
+  const searchTerms = [
+    `from:${email}`,
+    `to:${email}`,
+    `(recap OR summary OR notes OR "meeting notes" OR "action items" OR follow-up OR "next steps")`,
+    `after:${Math.floor(dayBefore.getTime() / 1000)}`,
+    `before:${Math.floor(dayAfter.getTime() / 1000)}`
+  ]
+  
+  // Add meeting title keywords if available
+  if (meetingTitle) {
+    const titleWords = meetingTitle.split(' ').filter(word => 
+      word.length > 3 && 
+      !['meeting', 'call', 'sync', 'intro', 'and', 'the', 'with'].includes(word.toLowerCase())
+    )
+    if (titleWords.length > 0) {
+      searchTerms.push(`(${titleWords.join(' OR ')})`)
+    }
+  }
+  
+  const query = searchTerms.join(' ')
+  
+  try {
+    logMessage(`Gmail search query: ${query}`)
+    
+    const response = await gmail.users.messages.list({
+      userId: 'me',
+      q: query,
+      maxResults: 10
+    })
+    
+    const messages = response.data.messages || []
+    
+    if (messages.length === 0) {
+      logMessage(`No Gmail messages found for ${email}`)
+      return null
+    }
+    
+    // Get the most recent relevant message
+    for (const message of messages.slice(0, 3)) { // Check top 3 messages
+      try {
+        const messageDetail = await gmail.users.messages.get({
+          userId: 'me',
+          id: message.id,
+          format: 'full'
+        })
+        
+        const headers = messageDetail.data.payload.headers
+        const subject = headers.find(h => h.name.toLowerCase() === 'subject')?.value || ''
+        const from = headers.find(h => h.name.toLowerCase() === 'from')?.value || ''
+        
+        // Check if this email is likely a meeting recap
+        const isRecap = /recap|summary|notes|follow.?up|action.?items|next.?steps|discussed|meeting.?notes/i.test(subject)
+        const isFromAttendee = from.toLowerCase().includes(email.toLowerCase())
+        
+        if (isRecap || isFromAttendee) {
+          const body = extractEmailBody(messageDetail.data.payload)
+          if (body && body.length > 100) { // Ensure we have substantial content
+            logMessage(`Found Gmail recap from ${email}: ${subject}`)
+            return `Subject: ${subject}\nFrom: ${from}\n\n${body}`
+          }
+        }
+      } catch (error) {
+        logMessage(`Error reading Gmail message: ${error.message}`)
+      }
+    }
+    
+    return null
+    
+  } catch (error) {
+    logMessage(`Gmail API error: ${error.message}`)
+    throw error
+  }
+}
+
+// Extract text body from Gmail message payload
+function extractEmailBody(payload) {
+  let body = ''
+  
+  if (payload.body && payload.body.data) {
+    body = Buffer.from(payload.body.data, 'base64').toString('utf-8')
+  } else if (payload.parts) {
+    for (const part of payload.parts) {
+      if (part.mimeType === 'text/plain' && part.body && part.body.data) {
+        body = Buffer.from(part.body.data, 'base64').toString('utf-8')
+        break
+      } else if (part.mimeType === 'text/html' && part.body && part.body.data && !body) {
+        // Use HTML as fallback, strip tags
+        const htmlBody = Buffer.from(part.body.data, 'base64').toString('utf-8')
+        body = htmlBody.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&')
+      }
+    }
+  }
+  
+  // Clean up the body text
+  return body
+    .replace(/\r\n/g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim()
+    .substring(0, 5000) // Limit to 5000 chars for AI processing
 }
 
 // Get calendar events from last 60 days with investor-related keywords
@@ -405,14 +550,15 @@ async function getFirefliesTranscript(email, meetingDate) {
   }
 }
 
-// Analyze meeting transcript with AI
-async function analyzeWithAI(transcript, contactName) {
+// Analyze meeting transcript/notes with AI
+async function analyzeWithAI(content, contactName, source = 'Unknown') {
   const prompt = `
-Analyze this investor meeting transcript and extract CRM information. 
+Analyze this investor meeting ${source.toLowerCase()} and extract CRM information. 
 Contact: ${contactName}
+Source: ${source}
 
-Transcript:
-${transcript}
+Content:
+${content}
 
 Please provide a JSON response with:
 - status: (one of: "Interested", "Follow-up", "Meeting Scheduled", "Rejected", "Under Review")
@@ -460,7 +606,7 @@ Focus on investment interest, concerns raised, timeline, and concrete next steps
     return {
       status: 'Under Review',
       nextStep: 'Manual review required',
-      notes: 'AI analysis failed - manual review needed'
+      notes: `${source} content found - manual review needed`
     }
   }
 }
