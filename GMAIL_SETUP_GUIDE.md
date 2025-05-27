@@ -3,16 +3,19 @@
 Since your service account doesn't have an inbox for email forwarding, I've created an OAuth 2.0 solution that uses your unrestricted API key to enable Gmail access.
 
 ## Problem
+
 - Service accounts can't receive emails (no inbox)
 - Email forwarding to service account won't work
 - Need access to your Gmail to sync Fireflies transcripts
 
 ## Solution
+
 OAuth 2.0 flow that lets you authorize your personal Gmail account for the CRM to access.
 
 ## Setup Steps
 
 ### 1. Configure Google OAuth (Required)
+
 You need to set up OAuth credentials in Google Cloud Console:
 
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
@@ -26,6 +29,7 @@ You need to set up OAuth credentials in Google Cloud Console:
    - `https://your-domain.com/api/auth/gmail/callback` (for production)
 
 ### 2. Update Environment Variables
+
 Replace the placeholder values in your `.env` file:
 
 ```env
@@ -35,6 +39,7 @@ NEXTAUTH_URL=http://localhost:3000
 ```
 
 ### 3. Authorization Flow
+
 Once configured, follow this process:
 
 1. **Start Authorization**: Visit `/api/auth/gmail?redirect=true`

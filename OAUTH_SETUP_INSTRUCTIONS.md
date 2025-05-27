@@ -1,17 +1,19 @@
 # OAuth Setup Instructions
 
 ## Current Issue
+
 Your `.env` file still contains placeholder OAuth credentials:
-```
+
+```env
 GOOGLE_CLIENT_ID=your-google-client-id-here
 GOOGLE_CLIENT_SECRET=your-google-client-secret-here
-```
+```bash
 
 ## Step-by-Step Fix
 
 ### 1. Get Your OAuth Credentials from Google Cloud Console
 
-1. **Go to Google Cloud Console**: https://console.cloud.google.com/
+1. **Go to Google Cloud Console**: <https://console.cloud.google.com/>
 2. **Select your project**: `crm-autopilot`
 3. **Navigate to**: APIs & Services > Credentials
 4. **Look for your OAuth 2.0 Client ID** (you mentioned it's already configured)
@@ -22,6 +24,7 @@ GOOGLE_CLIENT_SECRET=your-google-client-secret-here
 ### 2. Update Your .env File
 
 Replace these lines in your `.env` file:
+
 ```env
 # OLD (placeholder values):
 GOOGLE_CLIENT_ID=your-google-client-id-here
@@ -35,13 +38,15 @@ GOOGLE_CLIENT_SECRET=GOCSPX-abc123def456
 ### 3. Verify Redirect URI
 
 Make sure your OAuth client in Google Cloud Console has this redirect URI:
-```
+
+```text
 http://localhost:3000/api/auth/gmail/callback
 ```
 
 ### 4. Restart Your Server
 
 After updating `.env`, restart your development server:
+
 ```bash
 # Stop current server (Ctrl+C)
 # Then restart:
@@ -63,6 +68,7 @@ npm run dev
 ## Quick Verification
 
 Run this to check your current config:
+
 ```bash
 curl http://localhost:3000/api/gmail-quick-setup
 ```
